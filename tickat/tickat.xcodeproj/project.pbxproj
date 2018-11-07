@@ -1,0 +1,904 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		189716382193835A004A8AAB /* Curiosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189716372193835A004A8AAB /* Curiosity.swift */; };
+		383882C621922E89005C0456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882C521922E89005C0456 /* AppDelegate.swift */; };
+		383882C821922E89005C0456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882C721922E89005C0456 /* ViewController.swift */; };
+		383882CB21922E89005C0456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383882C921922E89005C0456 /* Main.storyboard */; };
+		383882CD21922E89005C0456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383882CC21922E89005C0456 /* Assets.xcassets */; };
+		383882D021922E89005C0456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383882CE21922E89005C0456 /* LaunchScreen.storyboard */; };
+		383882DB21922E89005C0456 /* tickatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882DA21922E89005C0456 /* tickatTests.swift */; };
+		383882E621922E89005C0456 /* tickatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882E521922E89005C0456 /* tickatUITests.swift */; };
+		383882EB21922E89005C0456 /* tickat WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 383882EA21922E89005C0456 /* tickat WatchKit App.app */; };
+		383882F121922E89005C0456 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383882EF21922E89005C0456 /* Interface.storyboard */; };
+		383882F321922E8A005C0456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383882F221922E8A005C0456 /* Assets.xcassets */; };
+		383882FA21922E8A005C0456 /* tickat WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 383882F921922E8A005C0456 /* tickat WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		383882FF21922E8A005C0456 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882FE21922E8A005C0456 /* InterfaceController.swift */; };
+		3838830121922E8A005C0456 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838830021922E8A005C0456 /* ExtensionDelegate.swift */; };
+		3838830321922E8A005C0456 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838830221922E8A005C0456 /* NotificationController.swift */; };
+		3838830521922E8B005C0456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3838830421922E8B005C0456 /* Assets.xcassets */; };
+		A16F0232219363A700D20A92 /* ViewControllerBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F0231219363A700D20A92 /* ViewControllerBadges.swift */; };
+		A16F02342193645900D20A92 /* ViewControllerCuriosities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */; };
+		A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02352193650000D20A92 /* ViewControllerMap.swift */; };
+		A16F023821936F1D00D20A92 /* BadgesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */; };
+		A16F023A2193707F00D20A92 /* CuriositiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		383882D721922E89005C0456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383882BA21922E89005C0456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383882C121922E89005C0456;
+			remoteInfo = tickat;
+		};
+		383882E221922E89005C0456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383882BA21922E89005C0456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383882C121922E89005C0456;
+			remoteInfo = tickat;
+		};
+		383882EC21922E89005C0456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383882BA21922E89005C0456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383882E921922E89005C0456;
+			remoteInfo = "tickat WatchKit App";
+		};
+		383882FB21922E8A005C0456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383882BA21922E89005C0456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 383882F821922E8A005C0456;
+			remoteInfo = "tickat WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3838830D21922E8B005C0456 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				383882FA21922E8A005C0456 /* tickat WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3838831121922E8B005C0456 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				383882EB21922E89005C0456 /* tickat WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		189716372193835A004A8AAB /* Curiosity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curiosity.swift; sourceTree = "<group>"; };
+		383882C221922E89005C0456 /* tickat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tickat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		383882C521922E89005C0456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		383882C721922E89005C0456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		383882CA21922E89005C0456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		383882CC21922E89005C0456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		383882CF21922E89005C0456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		383882D121922E89005C0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383882D621922E89005C0456 /* tickatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tickatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		383882DA21922E89005C0456 /* tickatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tickatTests.swift; sourceTree = "<group>"; };
+		383882DC21922E89005C0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383882E121922E89005C0456 /* tickatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tickatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		383882E521922E89005C0456 /* tickatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tickatUITests.swift; sourceTree = "<group>"; };
+		383882E721922E89005C0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383882EA21922E89005C0456 /* tickat WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tickat WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		383882F021922E89005C0456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		383882F221922E8A005C0456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		383882F421922E8A005C0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383882F921922E8A005C0456 /* tickat WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "tickat WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		383882FE21922E8A005C0456 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		3838830021922E8A005C0456 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		3838830221922E8A005C0456 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		3838830421922E8B005C0456 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3838830621922E8B005C0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3838830721922E8B005C0456 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A16F0231219363A700D20A92 /* ViewControllerBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBadges.swift; sourceTree = "<group>"; };
+		A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCuriosities.swift; sourceTree = "<group>"; };
+		A16F02352193650000D20A92 /* ViewControllerMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
+		A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewCell.swift; sourceTree = "<group>"; };
+		A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriositiesTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		383882BF21922E89005C0456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882D321922E89005C0456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882DE21922E89005C0456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882F621922E8A005C0456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		189716362193823D004A8AAB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				189716372193835A004A8AAB /* Curiosity.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		383882B921922E89005C0456 = {
+			isa = PBXGroup;
+			children = (
+				383882C421922E89005C0456 /* tickat */,
+				383882D921922E89005C0456 /* tickatTests */,
+				383882E421922E89005C0456 /* tickatUITests */,
+				383882EE21922E89005C0456 /* tickat WatchKit App */,
+				383882FD21922E8A005C0456 /* tickat WatchKit Extension */,
+				383882C321922E89005C0456 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		383882C321922E89005C0456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				383882C221922E89005C0456 /* tickat.app */,
+				383882D621922E89005C0456 /* tickatTests.xctest */,
+				383882E121922E89005C0456 /* tickatUITests.xctest */,
+				383882EA21922E89005C0456 /* tickat WatchKit App.app */,
+				383882F921922E8A005C0456 /* tickat WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		383882C421922E89005C0456 /* tickat */ = {
+			isa = PBXGroup;
+			children = (
+				383882C521922E89005C0456 /* AppDelegate.swift */,
+				383882C721922E89005C0456 /* ViewController.swift */,
+				189716362193823D004A8AAB /* Classes */,
+				383882C921922E89005C0456 /* Main.storyboard */,
+				A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */,
+				A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */,
+				383882CC21922E89005C0456 /* Assets.xcassets */,
+				383882CE21922E89005C0456 /* LaunchScreen.storyboard */,
+				A16F0231219363A700D20A92 /* ViewControllerBadges.swift */,
+				A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */,
+				A16F02352193650000D20A92 /* ViewControllerMap.swift */,
+				383882D121922E89005C0456 /* Info.plist */,
+			);
+			path = tickat;
+			sourceTree = "<group>";
+		};
+		383882D921922E89005C0456 /* tickatTests */ = {
+			isa = PBXGroup;
+			children = (
+				383882DA21922E89005C0456 /* tickatTests.swift */,
+				383882DC21922E89005C0456 /* Info.plist */,
+			);
+			path = tickatTests;
+			sourceTree = "<group>";
+		};
+		383882E421922E89005C0456 /* tickatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				383882E521922E89005C0456 /* tickatUITests.swift */,
+				383882E721922E89005C0456 /* Info.plist */,
+			);
+			path = tickatUITests;
+			sourceTree = "<group>";
+		};
+		383882EE21922E89005C0456 /* tickat WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				383882EF21922E89005C0456 /* Interface.storyboard */,
+				383882F221922E8A005C0456 /* Assets.xcassets */,
+				383882F421922E8A005C0456 /* Info.plist */,
+			);
+			path = "tickat WatchKit App";
+			sourceTree = "<group>";
+		};
+		383882FD21922E8A005C0456 /* tickat WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				383882FE21922E8A005C0456 /* InterfaceController.swift */,
+				3838830021922E8A005C0456 /* ExtensionDelegate.swift */,
+				3838830221922E8A005C0456 /* NotificationController.swift */,
+				3838830421922E8B005C0456 /* Assets.xcassets */,
+				3838830621922E8B005C0456 /* Info.plist */,
+				3838830721922E8B005C0456 /* PushNotificationPayload.apns */,
+			);
+			path = "tickat WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		383882C121922E89005C0456 /* tickat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3838831221922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickat" */;
+			buildPhases = (
+				383882BE21922E89005C0456 /* Sources */,
+				383882BF21922E89005C0456 /* Frameworks */,
+				383882C021922E89005C0456 /* Resources */,
+				3838831121922E8B005C0456 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				383882ED21922E89005C0456 /* PBXTargetDependency */,
+			);
+			name = tickat;
+			productName = tickat;
+			productReference = 383882C221922E89005C0456 /* tickat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		383882D521922E89005C0456 /* tickatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3838831521922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickatTests" */;
+			buildPhases = (
+				383882D221922E89005C0456 /* Sources */,
+				383882D321922E89005C0456 /* Frameworks */,
+				383882D421922E89005C0456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				383882D821922E89005C0456 /* PBXTargetDependency */,
+			);
+			name = tickatTests;
+			productName = tickatTests;
+			productReference = 383882D621922E89005C0456 /* tickatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		383882E021922E89005C0456 /* tickatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3838831821922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickatUITests" */;
+			buildPhases = (
+				383882DD21922E89005C0456 /* Sources */,
+				383882DE21922E89005C0456 /* Frameworks */,
+				383882DF21922E89005C0456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				383882E321922E89005C0456 /* PBXTargetDependency */,
+			);
+			name = tickatUITests;
+			productName = tickatUITests;
+			productReference = 383882E121922E89005C0456 /* tickatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		383882E921922E89005C0456 /* tickat WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3838830E21922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickat WatchKit App" */;
+			buildPhases = (
+				383882E821922E89005C0456 /* Resources */,
+				3838830D21922E8B005C0456 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				383882FC21922E8A005C0456 /* PBXTargetDependency */,
+			);
+			name = "tickat WatchKit App";
+			productName = "tickat WatchKit App";
+			productReference = 383882EA21922E89005C0456 /* tickat WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		383882F821922E8A005C0456 /* tickat WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3838830A21922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickat WatchKit Extension" */;
+			buildPhases = (
+				383882F521922E8A005C0456 /* Sources */,
+				383882F621922E8A005C0456 /* Frameworks */,
+				383882F721922E8A005C0456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tickat WatchKit Extension";
+			productName = "tickat WatchKit Extension";
+			productReference = 383882F921922E8A005C0456 /* tickat WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		383882BA21922E89005C0456 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Paula Vaz";
+				TargetAttributes = {
+					383882C121922E89005C0456 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					383882D521922E89005C0456 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 383882C121922E89005C0456;
+					};
+					383882E021922E89005C0456 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 383882C121922E89005C0456;
+					};
+					383882E921922E89005C0456 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					383882F821922E8A005C0456 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 383882BD21922E89005C0456 /* Build configuration list for PBXProject "tickat" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 383882B921922E89005C0456;
+			productRefGroup = 383882C321922E89005C0456 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				383882C121922E89005C0456 /* tickat */,
+				383882D521922E89005C0456 /* tickatTests */,
+				383882E021922E89005C0456 /* tickatUITests */,
+				383882E921922E89005C0456 /* tickat WatchKit App */,
+				383882F821922E8A005C0456 /* tickat WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		383882C021922E89005C0456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383882D021922E89005C0456 /* LaunchScreen.storyboard in Resources */,
+				383882CD21922E89005C0456 /* Assets.xcassets in Resources */,
+				383882CB21922E89005C0456 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882D421922E89005C0456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882DF21922E89005C0456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882E821922E89005C0456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383882F321922E8A005C0456 /* Assets.xcassets in Resources */,
+				383882F121922E89005C0456 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882F721922E8A005C0456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3838830521922E8B005C0456 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		383882BE21922E89005C0456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16F023821936F1D00D20A92 /* BadgesCollectionViewCell.swift in Sources */,
+				A16F02342193645900D20A92 /* ViewControllerCuriosities.swift in Sources */,
+				A16F0232219363A700D20A92 /* ViewControllerBadges.swift in Sources */,
+				A16F023A2193707F00D20A92 /* CuriositiesTableViewCell.swift in Sources */,
+				383882C821922E89005C0456 /* ViewController.swift in Sources */,
+				189716382193835A004A8AAB /* Curiosity.swift in Sources */,
+				A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */,
+				383882C621922E89005C0456 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882D221922E89005C0456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383882DB21922E89005C0456 /* tickatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882DD21922E89005C0456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383882E621922E89005C0456 /* tickatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		383882F521922E8A005C0456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3838830321922E8A005C0456 /* NotificationController.swift in Sources */,
+				3838830121922E8A005C0456 /* ExtensionDelegate.swift in Sources */,
+				383882FF21922E8A005C0456 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		383882D821922E89005C0456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383882C121922E89005C0456 /* tickat */;
+			targetProxy = 383882D721922E89005C0456 /* PBXContainerItemProxy */;
+		};
+		383882E321922E89005C0456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383882C121922E89005C0456 /* tickat */;
+			targetProxy = 383882E221922E89005C0456 /* PBXContainerItemProxy */;
+		};
+		383882ED21922E89005C0456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383882E921922E89005C0456 /* tickat WatchKit App */;
+			targetProxy = 383882EC21922E89005C0456 /* PBXContainerItemProxy */;
+		};
+		383882FC21922E8A005C0456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 383882F821922E8A005C0456 /* tickat WatchKit Extension */;
+			targetProxy = 383882FB21922E8A005C0456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		383882C921922E89005C0456 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383882CA21922E89005C0456 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		383882CE21922E89005C0456 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383882CF21922E89005C0456 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		383882EF21922E89005C0456 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383882F021922E89005C0456 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3838830821922E8B005C0456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3838830921922E8B005C0456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3838830B21922E8B005C0456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		3838830C21922E8B005C0456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
+		3838830F21922E8B005C0456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				IBSC_MODULE = tickat_WatchKit_Extension;
+				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Debug;
+		};
+		3838831021922E8B005C0456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				IBSC_MODULE = tickat_WatchKit_Extension;
+				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+			};
+			name = Release;
+		};
+		3838831321922E8B005C0456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AUVGK4GFGB;
+				INFOPLIST_FILE = tickat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3838831421922E8B005C0456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AUVGK4GFGB;
+				INFOPLIST_FILE = tickat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3838831621922E8B005C0456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				INFOPLIST_FILE = tickatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tickat.app/tickat";
+			};
+			name = Debug;
+		};
+		3838831721922E8B005C0456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				INFOPLIST_FILE = tickatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tickat.app/tickat";
+			};
+			name = Release;
+		};
+		3838831921922E8B005C0456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				INFOPLIST_FILE = tickatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tickat;
+			};
+			name = Debug;
+		};
+		3838831A21922E8B005C0456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				INFOPLIST_FILE = tickatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = tickat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		383882BD21922E89005C0456 /* Build configuration list for PBXProject "tickat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838830821922E8B005C0456 /* Debug */,
+				3838830921922E8B005C0456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3838830A21922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickat WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838830B21922E8B005C0456 /* Debug */,
+				3838830C21922E8B005C0456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3838830E21922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickat WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838830F21922E8B005C0456 /* Debug */,
+				3838831021922E8B005C0456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3838831221922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838831321922E8B005C0456 /* Debug */,
+				3838831421922E8B005C0456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3838831521922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838831621922E8B005C0456 /* Debug */,
+				3838831721922E8B005C0456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3838831821922E8B005C0456 /* Build configuration list for PBXNativeTarget "tickatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3838831921922E8B005C0456 /* Debug */,
+				3838831A21922E8B005C0456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 383882BA21922E89005C0456 /* Project object */;
+}
