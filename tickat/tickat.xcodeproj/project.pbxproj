@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		189716382193835A004A8AAB /* Curiosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189716372193835A004A8AAB /* Curiosity.swift */; };
+		1897163A219394FE004A8AAB /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18971639219394FE004A8AAB /* Badge.swift */; };
 		383882C621922E89005C0456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882C521922E89005C0456 /* AppDelegate.swift */; };
 		383882C821922E89005C0456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882C721922E89005C0456 /* ViewController.swift */; };
 		383882CB21922E89005C0456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383882C921922E89005C0456 /* Main.storyboard */; };
@@ -88,6 +89,7 @@
 
 /* Begin PBXFileReference section */
 		189716372193835A004A8AAB /* Curiosity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curiosity.swift; sourceTree = "<group>"; };
+		18971639219394FE004A8AAB /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		383882C221922E89005C0456 /* tickat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tickat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		383882C521922E89005C0456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		383882C721922E89005C0456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				189716372193835A004A8AAB /* Curiosity.swift */,
+				18971639219394FE004A8AAB /* Badge.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				383882C821922E89005C0456 /* ViewController.swift in Sources */,
 				189716382193835A004A8AAB /* Curiosity.swift in Sources */,
 				A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */,
+				1897163A219394FE004A8AAB /* Badge.swift in Sources */,
 				383882C621922E89005C0456 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
