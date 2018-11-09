@@ -23,15 +23,32 @@ class User {
     }
 
     
-    // adicionar curiosidades desbloqueadas ao perfil do user
-    func addCuriosity() {
+    // adiciona nova curiosidade desbloqueada ao perfil do user
+    func addCuriosity(newCuriosity: Curiosity) {
+        self.unblockedCuriosities.append(newCuriosity)
     }
+    
     
     // chamar a func unlockBadge na classe Badge
     func checkForBadges() {
+        // precisa do banco de dados das badges
+        for badge in allBlockedBadges {
+            if unblockedCuriosities.count == badge.curiositiesNeeded {
+                badge.unblockBadge()
+                addBadge(newBadge: badge)
+                break
+            }
+        }
     }
     
-    // adicionar badges desbloqueados ao perfil do user
-    func addBadge() {
+    
+    // adiciona nova badge desbloqueada ao perfil do user
+    func addBadge(newBadge: Badge) {
+        self.badges.append(newBadge)
     }
 }
+
+
+// [PROVISORIO] banco de dados das badges
+var allBlockedBadges: [Badge] = [Badge(name: "Varzeano", image: UIImage(named: "")!, curiositiesNeeded: 5),
+                                 Badge(name: "Recifense", image: UIImage(named: "")!, curiositiesNeeded: 15)]
