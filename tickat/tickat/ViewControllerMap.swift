@@ -31,7 +31,6 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         determineMyCurrentLocation()
     }
     
