@@ -16,6 +16,11 @@ struct AppData {
     // usuário do app
     var user = User(id: "User")
     
+    // usuário fake pra teste
+    var userTeste = User(id: "User Teste",
+                         unblockedCuriosities: [Curiosity(isBlocked: false, shortDescription: "curta", longDescription: "longa", images: [UIImage(named: "check-box-empty")!])],
+                         badges: [Badge(isBlocked: false, name: "badge teste", image: UIImage(named: "check-box-empty")!, curiositiesNeeded: 1)])
+    
     var allLocations: [Location] = [Location(isBlocked: true,
                                              name: "Praça da Várzea",
                                              curiosity: Curiosity(isBlocked: true,

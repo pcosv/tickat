@@ -17,22 +17,24 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
     // VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
+        
+        badgesCollectionView.dataSource = self
+        badgesCollectionView.delegate = self
     }
     
     
     
     // Number Of Items in Section   (Data Source)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppData.shared.user.badges.count  // quantidade de badges desbloqueadas do usuário
+        return AppData.shared.userTeste.badges.count  // quantidade de badges desbloqueadas do usuário
     }
     
     // Cell For Item At   (Data Source)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: BadgesCollectionViewCell = collectionView.cellForItem(at: indexPath) as! BadgesCollectionViewCell
+        let cell: BadgesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "badgeCell", for: indexPath) as! BadgesCollectionViewCell
        
-        cell.badgeImage.image = AppData.shared.user.badges[indexPath.row].image
-        cell.badgeName.text = AppData.shared.user.badges[indexPath.row].name
+        cell.badgeImage.image = AppData.shared.userTeste.badges[indexPath.row].image
+        cell.badgeName.text = AppData.shared.userTeste.badges[indexPath.row].name
         
         return cell
     }
