@@ -72,6 +72,11 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     // esta função será responsável por plotar as Locations na tela
     func drawMap() {
-        
+        // show location on map
+        let location = Location(title: "Praça da Várzea",
+                              locationName: "Várzea",
+                              discipline: "Praça",
+                              coordinate: CLLocationCoordinate2D(latitude: -8.048835, longitude: -34.959437))
+        map.addAnnotation(location)
     }
 }
