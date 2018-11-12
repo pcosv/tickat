@@ -13,10 +13,10 @@ import UIKit
 struct AppData {
     var user = User(id: "User")
     
-    var blockedCuriosities:[Curiosity] = [Curiosity(isBlocked: false, shortDescription: "aa", longDescription: "AAA", images: [UIImage(cgImage: CGRect(x: 0, y: 0, width: 100, height: 100) as! CGImage)]), Curiosity(isBlocked: false, shortDescription: "bb", longDescription: "BBB", images: [UIImage(cgImage: CGRect(x: 0, y: 0, width: 100, height: 100) as! CGImage)])]
+    var blockedCuriosities:[Curiosity] = [Curiosity(isBlocked: false, shortDescription: "aa", longDescription: "AAA", images: [UIImage(named: "check-box-empty")!]), Curiosity(isBlocked: false, shortDescription: "bb", longDescription: "BBB", images: [UIImage(named: "check-box-empty")!])]
     
-    var allBlockedBadges: [Badge] = [Badge(name: "Varzeano", image: UIImage(named: "")!, curiositiesNeeded: 5),
-                                     Badge(name: "Recifense", image: UIImage(named: "")!, curiositiesNeeded: 15)]
+    var allBlockedBadges: [Badge] = [Badge(name: "Varzeano", image: UIImage(named: "check-box-empty")!, curiositiesNeeded: 5),
+                                     Badge(name: "Recifense", image: UIImage(named: "check-box-empty")!, curiositiesNeeded: 15)]
     
     static var shared = AppData()
 }

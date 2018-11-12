@@ -18,10 +18,15 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return AppData.shared.user.unblockedCuriosities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let tableCell:CuriositiesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "curiositiesCell", for: indexPath) as! CuriositiesTableViewCell
+        
+        tableCell.curiosityTitle.text = AppData.shared.user.unblockedCuriosities[indexPath.row].shortDescription
+        tableCell.curiosityText.text = AppData.shared.user.unblockedCuriosities[indexPath.row].longDescription
+        
+        return tableCell
     }
 }
