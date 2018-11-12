@@ -11,15 +11,20 @@ import UIKit
 
 class User {
     var id: String
-    var unblockedCuriosities: [Curiosity]
-    var badges: [Badge]
+    var unblockedCuriosities: [Curiosity] = []
+    var badges: [Badge] = []
     
     
     // init completo
+    init(id: String, unblockedCuriosities: [Curiosity], badges: [Badge]) {
+        self.id = id
+        self.unblockedCuriosities = unblockedCuriosities
+        self.badges = badges
+    }
+    
+    // init pra teste
     init(id: String) {
         self.id = id
-        self.unblockedCuriosities = []
-        self.badges = []
     }
 
     
