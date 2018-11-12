@@ -16,10 +16,10 @@ class User {
     
     
     // init completo
-    init(id: String, unblockedCuriosities: Curiosity, badges: Badge) {
+    init(id: String) {
         self.id = id
-        self.unblockedCuriosities = [unblockedCuriosities]
-        self.badges = [badges]
+        self.unblockedCuriosities = []
+        self.badges = []
     }
 
     
@@ -32,7 +32,7 @@ class User {
     // chamar a func unlockBadge na classe Badge
     func checkForBadges() {
         // precisa do banco de dados das badges
-        for badge in allBlockedBadges {
+        for badge in AppData.shared.allBlockedBadges { // chamando da mediadora AppData
             if unblockedCuriosities.count == badge.curiositiesNeeded {
                 badge.unblockBadge()
                 addBadge(newBadge: badge)
@@ -49,6 +49,4 @@ class User {
 }
 
 
-// [PROVISORIO] banco de dados das badges
-var allBlockedBadges: [Badge] = [Badge(name: "Varzeano", image: UIImage(named: "")!, curiositiesNeeded: 5),
-                                 Badge(name: "Recifense", image: UIImage(named: "")!, curiositiesNeeded: 15)]
+

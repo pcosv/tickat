@@ -8,8 +8,20 @@
 
 import UIKit
 
-class ViewControllerCuriosities: UIViewController {
+class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var curiositiesTableView: UITableView!
     @IBOutlet weak var curiositiesLabel: UILabel!
     
+    
+    override func viewDidLoad() {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 }
