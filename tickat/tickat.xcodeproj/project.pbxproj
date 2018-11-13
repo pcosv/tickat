@@ -32,6 +32,7 @@
 		A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02352193650000D20A92 /* ViewControllerMap.swift */; };
 		A16F023821936F1D00D20A92 /* BadgesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */; };
 		A16F023A2193707F00D20A92 /* CuriositiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */; };
+		A1DCE4E72199EAB6003E52D5 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCE4E62199EAB6003E52D5 /* AppData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		A16F02352193650000D20A92 /* ViewControllerMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
 		A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewCell.swift; sourceTree = "<group>"; };
 		A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriositiesTableViewCell.swift; sourceTree = "<group>"; };
+		A1DCE4E62199EAB6003E52D5 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				383882CE21922E89005C0456 /* LaunchScreen.storyboard */,
 				A16F0231219363A700D20A92 /* ViewControllerBadges.swift */,
 				A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */,
+				A1DCE4E62199EAB6003E52D5 /* AppData.swift */,
 				A16F02352193650000D20A92 /* ViewControllerMap.swift */,
 				387141302199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift */,
 				383882D121922E89005C0456 /* Info.plist */,
@@ -464,6 +467,7 @@
 				1897163A219394FE004A8AAB /* Badge.swift in Sources */,
 				952897132194B897000B1ABC /* User.swift in Sources */,
 				383882C621922E89005C0456 /* AppDelegate.swift in Sources */,
+				A1DCE4E72199EAB6003E52D5 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
