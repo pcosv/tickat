@@ -20,17 +20,22 @@ struct AppData {
     var userTeste = User(id: "User Teste",
                          unblockedCuriosities: [Curiosity(isBlocked: false, title: "local", shortDescription: "curta", longDescription: "longa", images: [UIImage(named: "check-box-empty")!])],
                          badges: [Badge(name: "Primeira Descoberta!",
+                                        description: "Parabéns! Você deu seu primeiro passo em direção a ser um grande explorador!",
                                         image: UIImage(named: "check-box-empty")!,
                                         curiositiesNeeded: 1),
                                   Badge(name: "Andarilho",
+                                        description: "Você descobriu 5 curiosidades! Continue assim!",
                                         image: UIImage(named: "check-box-empty")!,
                                         curiositiesNeeded: 5),
                                   Badge(name: "Varzeano",
+                                        description: "Um grande conhecedor da várzea, praticamente nasceu aqui",
                                         image: UIImage(named: "check-box-empty")!,
                                         curiositiesNeeded: 10),
                                   Badge(name: "Recifense",
+                                        description: "Recife é sua casa agora, não há como negar",
                                         image: UIImage(named: "check-box-empty")!,
                                         curiositiesNeeded: 15)] )
+    
     
     var allLocations: [Location] = [Location(isBlocked: true,
                                              name: "Praça da Várzea",
@@ -41,16 +46,21 @@ struct AppData {
                                                                   images: [UIImage(named: "check-box-empty")!]),
                                              coordinates: CLLocation(latitude: -8.048835, longitude: -34.959437))]
     
+    
     var allBlockedBadges: [Badge] = [Badge(name: "Primeira Descoberta!",
+                                           description: "Parabéns! Você deu seu primeiro passo em direção a ser um grande explorador!",
                                            image: UIImage(named: "check-box-empty")!,
                                            curiositiesNeeded: 1),
                                      Badge(name: "Andarilho",
+                                           description: "Você descobriu 5 curiosidades! Continue assim!",
                                            image: UIImage(named: "check-box-empty")!,
                                            curiositiesNeeded: 5),
                                      Badge(name: "Varzeano",
+                                           description: "Um grande conhecedor da várzea, praticamente nasceu aqui",
                                            image: UIImage(named: "check-box-empty")!,
                                            curiositiesNeeded: 10),
                                      Badge(name: "Recifense",
+                                           description: "Recife é sua casa agora, não há como negar",
                                            image: UIImage(named: "check-box-empty")!,
                                            curiositiesNeeded: 15)]
     
