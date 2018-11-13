@@ -33,8 +33,13 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: BadgesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "badgeCell", for: indexPath) as! BadgesCollectionViewCell
        
+        cell.backgroundView?.layer.cornerRadius = 20
         cell.badgeImage.image = AppData.shared.userTeste.badges[indexPath.row].image
+// como aqui são ícones não precisa, mais indicado pra as fotos
+        //        cell.badgeImage.layer.cornerRadius = 100
+//        cell.badgeImage.layer.masksToBounds = true
         cell.badgeName.text = AppData.shared.userTeste.badges[indexPath.row].name
+        
         
         return cell
     }
