@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewControllerMap: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView!
     
     
@@ -73,10 +73,38 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     // esta função será responsável por plotar as Locations na tela
     func drawMap() {
         // show location on map
-        let location = Location(title: "Praça da Várzea",
+        let artwork = Artwork(title: "Praça da Várzea",
                               locationName: "Várzea",
                               discipline: "Praça",
                               coordinate: CLLocationCoordinate2D(latitude: -8.048835, longitude: -34.959437))
-        map.addAnnotation(location)
+        map.addAnnotation(artwork)
+    }
+}
+
+
+
+// fiz a extensão pra ficar mais organizado e separei a declaração dessa view como MKMapViewDelegate pra colocá-la aqui por causa das Annotations do mapa
+
+extension ViewControllerMap: MKMapViewDelegate {
+    // 1
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // 2
+        guard let annotation = annotation as? Artwork else { return nil }
+        // 3
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+        // 4
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            // 5
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        return view
     }
 }
