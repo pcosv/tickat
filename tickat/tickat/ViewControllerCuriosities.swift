@@ -30,8 +30,8 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell:CuriositiesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "curiositiesCell", for: indexPath) as! CuriositiesTableViewCell
         
-        tableCell.curiosityTitle?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].shortDescription
-        tableCell.curiosityText?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].longDescription
+        tableCell.curiosityTitle?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].title
+        tableCell.curiosityText?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].shortDescription
         self.curiositiesTableView.separatorStyle = .none
         
         return tableCell

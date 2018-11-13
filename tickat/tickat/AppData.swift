@@ -18,7 +18,7 @@ struct AppData {
     
     // usuário fake pra teste
     var userTeste = User(id: "User Teste",
-                         unblockedCuriosities: [Curiosity(isBlocked: false, shortDescription: "curta", longDescription: "longa", images: [UIImage(named: "check-box-empty")!])],
+                         unblockedCuriosities: [Curiosity(isBlocked: false, title: "local", shortDescription: "curta", longDescription: "longa", images: [UIImage(named: "check-box-empty")!])],
                          badges: [Badge(name: "Primeira Descoberta!",
                                         image: UIImage(named: "check-box-empty")!,
                                         curiositiesNeeded: 1),
@@ -35,6 +35,7 @@ struct AppData {
     var allLocations: [Location] = [Location(isBlocked: true,
                                              name: "Praça da Várzea",
                                              curiosity: Curiosity(isBlocked: true,
+                                                                  title: "Praça da Várzea",
                                                                   shortDescription: "Essa praça rotineira quase recebeu um tapa no visual por Burle Marx, em 1936!",
                                                                   longDescription: "Todo mundo que passa pela Praça Pinto Dâmaso nem imagina que, no passado, o paisagista Burle Marx fez um projeto pra ajardinar, colocar um playground, lago central e muita sombra - com mangueiras, oiti-da-praia, e palmeiras. A ideia dele era que virasse um ambiente massa pra galera se encontrar, mas infelizmente não foi executada completamente. Porém, se tu parar pra olhar, a praça tem traços do projeto, começando pelas palmeiras imperiais.",
                                                                   images: [UIImage(named: "check-box-empty")!]),
