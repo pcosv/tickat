@@ -12,27 +12,45 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
     
     @IBOutlet weak var badgesCollectionView: UICollectionView!
     @IBOutlet weak var badgesLabel: UILabel!
+ 
+    
+    // PopUp da Badge
+    @IBOutlet var popUpBadge: UIView!
+    @IBOutlet weak var iconBadgePopUp: UIImageView!
+    @IBOutlet weak var nameBadgePopUp: UILabel!
+    @IBOutlet weak var textBadgePopUp: UILabel!
+    @IBAction func closeBadgePopUp(_ sender: Any) {
+        dismissPopUp(popUp: popUpBadge)
+    }
+    
     
     
     // VIEW DID LOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
+        
+        badgesCollectionView.dataSource = self
+        badgesCollectionView.delegate = self
     }
     
     
     
     // Number Of Items in Section   (Data Source)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppData.shared.user.badges.count  // quantidade de badges desbloqueadas do usuário
+        return AppData.shared.userTeste.badges.count  // quantidade de badges desbloqueadas do usuário
     }
     
     // Cell For Item At   (Data Source)
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: BadgesCollectionViewCell = collectionView.cellForItem(at: indexPath) as! BadgesCollectionViewCell
+        let cell: BadgesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "badgeCell", for: indexPath) as! BadgesCollectionViewCell
        
-        cell.badgeImage.image = AppData.shared.user.badges[indexPath.row].image
-        cell.badgeName.text = AppData.shared.user.badges[indexPath.row].name
+        cell.backgroundView?.layer.cornerRadius = 20
+        cell.badgeImage.image = AppData.shared.userTeste.badges[indexPath.row].image
+        // como aqui são ícones não precisa, mais indicado pra as fotos
+        // cell.badgeImage.layer.cornerRadius = 100
+        // cell.badgeImage.layer.masksToBounds = true
+        cell.badgeName.text = AppData.shared.userTeste.badges[indexPath.row].name
+        
         
         return cell
     }
@@ -40,7 +58,36 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
     
     // Did Select Item At   (Delegate)
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // abrir um pop up explicando como a badge foi ganha?
+        // pop up explicando como a badge foi ganha ou algo do tipo
+        iconBadgePopUp.image = AppData.shared.userTeste.badges[indexPath.row].image
+        nameBadgePopUp.text = AppData.shared.userTeste.badges[indexPath.row].name
+        // textBadgePopUp.text = AppData.shared.userTeste.badges[indexPath.row].  badgeDescription
+        openPopUp(popUp: popUpBadge)
     }
+    
+    
+    
+    
+    // popUp
+    func openPopUp(popUp: UIView) {
+        popUp.layer.cornerRadius = 20
+        popUp.layer.masksToBounds = true
+        popUp.center = self.view.center
+        // openBlur()
+        // self.view.isUserInteractionEnabled = false
+        self.view.addSubview(popUp)
+      
+    }
+    
+    
+    func dismissPopUp(popUp:UIView) {
+        popUp.removeFromSuperview()
+        // closeBlur()
+
+    }
+    
+   
+    
+    
     
 }
