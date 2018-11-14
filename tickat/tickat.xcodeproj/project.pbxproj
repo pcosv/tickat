@@ -26,6 +26,7 @@
 		3838830521922E8B005C0456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3838830421922E8B005C0456 /* Assets.xcassets */; };
 		952897132194B897000B1ABC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897122194B897000B1ABC /* User.swift */; };
 		952897152194B8A6000B1ABC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897142194B8A6000B1ABC /* Location.swift */; };
+		9534D5E0219CB03C000DC4D9 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534D5DF219CB03C000DC4D9 /* LocationView.swift */; };
 		A16F0232219363A700D20A92 /* ViewControllerBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F0231219363A700D20A92 /* ViewControllerBadges.swift */; };
 		A16F02342193645900D20A92 /* ViewControllerCuriosities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */; };
 		A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02352193650000D20A92 /* ViewControllerMap.swift */; };
@@ -119,6 +120,7 @@
 		3838830721922E8B005C0456 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		952897122194B897000B1ABC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		952897142194B8A6000B1ABC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9534D5DF219CB03C000DC4D9 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		A16F0231219363A700D20A92 /* ViewControllerBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBadges.swift; sourceTree = "<group>"; };
 		A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCuriosities.swift; sourceTree = "<group>"; };
 		A16F02352193650000D20A92 /* ViewControllerMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				18971639219394FE004A8AAB /* Badge.swift */,
 				952897122194B897000B1ABC /* User.swift */,
 				952897142194B8A6000B1ABC /* Location.swift */,
+				9534D5DF219CB03C000DC4D9 /* LocationView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9534D5E0219CB03C000DC4D9 /* LocationView.swift in Sources */,
 				A16F023821936F1D00D20A92 /* BadgesCollectionViewCell.swift in Sources */,
 				952897152194B8A6000B1ABC /* Location.swift in Sources */,
 				A16F02342193645900D20A92 /* ViewControllerCuriosities.swift in Sources */,
