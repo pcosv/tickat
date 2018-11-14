@@ -61,7 +61,7 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
         // pop up explicando como a badge foi ganha ou algo do tipo
         iconBadgePopUp.image = AppData.shared.userTeste.badges[indexPath.row].image
         nameBadgePopUp.text = AppData.shared.userTeste.badges[indexPath.row].name
-        // textBadgePopUp.text = AppData.shared.userTeste.badges[indexPath.row].  badgeDescription
+        textBadgePopUp.text = AppData.shared.userTeste.badges[indexPath.row].description
         openPopUp(popUp: popUpBadge)
     }
     

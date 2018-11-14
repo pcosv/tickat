@@ -15,7 +15,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     var locationManager:CLLocationManager!
-
+    
     
     override func viewDidLoad() {
         drawMap()
@@ -26,7 +26,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
         map.showsUserLocation = true
         map.mapType = MKMapType(rawValue: 0)!
         map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,11 +67,14 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
         print("present location")
         print(newLocation.coordinate.latitude)
         print(newLocation.coordinate.longitude)
-
+        
     }
     
     // esta função será responsável por plotar as Locations na tela
     func drawMap() {
-        
+        // show location on map
+        for i in AppData.shared.allLocations {
+            map.addAnnotation(i)
+        }
     }
 }
