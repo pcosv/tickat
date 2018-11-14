@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import UserNotifications
 
-class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UNUserNotificationCenterDelegate {
     @IBOutlet weak var map: MKMapView!
     
     
@@ -19,6 +20,9 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     override func viewDidLoad() {
         drawMap()
+        
+        map.register(LocationMarkerView.self,
+                     forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         
         //mapview setup to show user location
