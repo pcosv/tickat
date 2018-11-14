@@ -10,12 +10,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewControllerMap: UIViewController, CLLocationManagerDelegate {
+class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var map: MKMapView!
     
     
     var locationManager:CLLocationManager!
-
+    
     
     override func viewDidLoad() {
         drawMap()
@@ -26,7 +26,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate {
         map.showsUserLocation = true
         map.mapType = MKMapType(rawValue: 0)!
         map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,44 +67,14 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate {
         print("present location")
         print(newLocation.coordinate.latitude)
         print(newLocation.coordinate.longitude)
-
+        
     }
     
     // esta função será responsável por plotar as Locations na tela
     func drawMap() {
         // show location on map
-        let artwork = Artwork(title: "Praça da Várzea",
-                              locationName: "Várzea",
-                              discipline: "Praça",
-                              coordinate: CLLocationCoordinate2D(latitude: -8.048835, longitude: -34.959437))
-        map.addAnnotation(artwork)
-    }
-}
-
-
-
-// fiz a extensão pra ficar mais organizado e separei a declaração dessa view como MKMapViewDelegate pra colocá-la aqui por causa das Annotations do mapa
-
-extension ViewControllerMap: MKMapViewDelegate {
-    // 1
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        // 2
-        guard let annotation = annotation as? Artwork else { return nil }
-        // 3
-        let identifier = "marker"
-        var view: MKMarkerAnnotationView
-        // 4
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-            as? MKMarkerAnnotationView {
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        } else {
-            // 5
-            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            view.canShowCallout = true
-            view.calloutOffset = CGPoint(x: -5, y: 5)
-            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        for i in AppData.shared.allLocations {
+            map.addAnnotation(i)
         }
-        return view
     }
 }

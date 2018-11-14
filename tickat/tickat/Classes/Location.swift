@@ -10,28 +10,28 @@ import Foundation
 // import UIKit  // não precisa do UiKit aqui, nas outras precisa pra poder usar UIImage
 import MapKit // pra poder usar CLLocation
 
-class Location {
+class Location: NSObject, MKAnnotation {
     var isBlocked: Bool = true // inicializada pra poder criar um init sem ela
-    var name: String
+    var title: String?
     var curiosity: Curiosity
-    var coordinates: CLLocation // essa classe é da biblioteca do MapKit
+    var coordinate: CLLocationCoordinate2D // essa classe é da biblioteca do MapKit
 
 
     // init completo
-    init(isBlocked: Bool, name: String, curiosity: Curiosity, coordinates: CLLocation) {
+    init(isBlocked: Bool, title: String, curiosity: Curiosity, coordinate: CLLocationCoordinate2D) {
         self.isBlocked = isBlocked
-        self.name = name
+        self.title = title
         self.curiosity = curiosity
-        self.coordinates = coordinates
+        self.coordinate = coordinate
     }
 
     // init sem o isBlocked
     // (assumindo que toda location é bloqueada por default)
     // se não for, usar o init completo
-    init(name: String, curiosity: Curiosity, coordinates: CLLocation) {
-        self.name = name
+    init(name: String, curiosity: Curiosity, coordinate: CLLocationCoordinate2D) {
+        self.title = name
         self.curiosity = curiosity
-        self.coordinates = coordinates
+        self.coordinate = coordinate
     }
 
 
