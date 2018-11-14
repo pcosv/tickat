@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var curiositiesTableView: UITableView!
@@ -33,17 +34,23 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
     
     // Vê a quantidade de itens na TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.shared.user.unblockedCuriosities.count
+        return AppData.shared.userTeste.unblockedCuriosities.count
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100.0
+//    }
     
     
     // Preenche os campos com as informações
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell:CuriositiesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "curiositiesCell", for: indexPath) as! CuriositiesTableViewCell
         
-        tableCell.curiosityTitle?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].title
-        tableCell.curiosityText?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].shortDescription
+        tableCell.curiosityTitle?.text = AppData.shared.userTeste.unblockedCuriosities[indexPath.row].title
+        tableCell.curiosityText?.text = AppData.shared.userTeste.unblockedCuriosities[indexPath.row].shortDescription
         self.curiositiesTableView.separatorStyle = .none
+        tableCell.curiositiesContentView.layer.cornerRadius = 20
+        tableCell.curiositiesContentView.layer.masksToBounds = true
         
         return tableCell
     }
@@ -61,8 +68,12 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
     
     // popUp
     func openPopUp(popUp: UIView) {
-        popUp.layer.cornerRadius = 20
-        popUp.layer.masksToBounds = true
+        //popUp.bounds.width = self.view.bounds.width
+        //popUp.bounds.height = self.view.bounds.height
+        // popUp.sizeThatFits(self.view!.frame)
+        //  bgColorView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        popUp.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 50, height: self.view.frame.height - 50)
+        // popUp.frame = self.view.frame
         popUp.center = self.view.center
         // openBlur()
         // self.view.isUserInteractionEnabled = false
