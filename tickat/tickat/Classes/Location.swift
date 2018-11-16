@@ -48,4 +48,9 @@ class Location: NSObject, MKAnnotation {
             return UIColor(displayP3Red: 255.0/255.0, green: 230.0/255.0, blue: 32.0/255.0, alpha: 1.0)
         }
     }
+    
+    var imageName: String? {
+        if isBlocked { return "locked" }
+        return "unlocked"
+    }
 }
