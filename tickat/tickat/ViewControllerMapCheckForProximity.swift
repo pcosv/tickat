@@ -20,18 +20,22 @@ extension ViewControllerMap{
             CLLocationManager.authorizationStatus() ==  .authorizedAlways){
             
             currentLocation = locManager.location
-            
-            print(currentLocation.coordinate.latitude)
-            print(currentLocation.coordinate.longitude)
+            //print(currentLocation.coordinate.latitude)
+            //print(currentLocation.coordinate.longitude)
         }
         
         // varre o array verificando e desbloqueia o local e a curiosidade associada
         for i in AppData.shared.allLocations{
             //print(i.isBlocked)
-            if i.coordinates.coordinate.longitude == currentLocation.coordinate.longitude && i.coordinates.coordinate.latitude == currentLocation.coordinate.latitude{
+            var aux = CLLocation(latitude: i.coordinate.latitude, longitude: i.coordinate.longitude)
+            
+            let distanceInMeters = currentLocation.distance(from: aux) // result is in meters
+            //print(distanceInMeters)
+            if distanceInMeters <= 30 {
                 i.isBlocked = false
-                //print(i.isBlocked)
+                print(i.isBlocked)
                 i.curiosity.unblockCuriosity()
+                // notifyUser(i)
             }
         }
     }

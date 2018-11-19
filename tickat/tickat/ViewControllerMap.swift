@@ -47,6 +47,11 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+       
+        
+        
+        
+        checkForProximity()
         let userLocation:CLLocation = locations[0] as CLLocation
         
         // Call stopUpdatingLocation() to stop listening for location updates,
@@ -54,8 +59,8 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         // manager.stopUpdatingLocation()
         
-        print("user latitude = \(userLocation.coordinate.latitude)")
-        print("user longitude = \(userLocation.coordinate.longitude)")
+        //print("user latitude = \(userLocation.coordinate.latitude)")
+        //print("user longitude = \(userLocation.coordinate.longitude)")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
