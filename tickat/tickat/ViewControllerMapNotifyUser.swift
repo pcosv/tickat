@@ -32,11 +32,6 @@ extension ViewControllerMap {
         
         let requestToDisplay = UNNotificationRequest(identifier: "newCuriosity", content: notificationContent, trigger: notificationTrigger)
         UNUserNotificationCenter.current().add(requestToDisplay, withCompletionHandler: nil)
-        
-        // Interactions from notifications
-        let checkCuriosityNow = UNNotificationAction(identifier: "checkCuriosityNow", title: "Vamos!", options: UNNotificationActionOptions.foreground)
-        
-        let categoriesForNotificationAnswer = UNNotificationCategory(identifier: "categoriesForNotificationAnswer", actions: [checkCuriosityNow], intentIdentifiers: [], options: [])
     }
     
 }
