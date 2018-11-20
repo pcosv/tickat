@@ -9,11 +9,17 @@
 import Foundation
 import MapKit
 
-class LocationMarkerView: MKMarkerAnnotationView {
+class LocationMarkerView: MKAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
             guard let location = newValue as? Location else { return }
-            markerTintColor = location.markerTintColor
+            //markerTintColor = location.markerTintColor
+            
+            if let imageName = location.imageName {
+                image = UIImage(named: imageName)
+            } else {
+                image = nil
+            }
         }
     }
 }
