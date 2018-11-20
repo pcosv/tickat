@@ -96,7 +96,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zMm-mf-DCU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Curiosities" id="5Th-0Z-Mgn"/>
+                    <tabBarItem key="tabBarItem" title="Curiosities" image="curiosityIcon" id="5Th-0Z-Mgn"/>
                     <connections>
                         <outlet property="curiositiesLabel" destination="52l-iY-fmR" id="lc6-Mq-VQ2"/>
                         <outlet property="curiositiesTableView" destination="kuB-SI-ogO" id="Oio-Cm-Za7"/>
@@ -184,7 +184,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cU2-qW-Ae6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="Qsn-3i-Drt"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="mapIcon" id="Qsn-3i-Drt"/>
                     <connections>
                         <outlet property="map" destination="IWi-II-q7i" id="oYB-f7-cLb"/>
                     </connections>
@@ -202,6 +202,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.99949055909999995" green="0.90061157940000003" blue="0.12366238979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="1Mn-FE-pe7" kind="relationship" relationship="viewControllers" id="m5s-vb-jlw"/>
@@ -294,7 +295,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Badges" id="bqK-no-g5i"/>
+                    <tabBarItem key="tabBarItem" title="Badges" image="badgesIcon" id="bqK-no-g5i"/>
                     <connections>
                         <outlet property="badgesCollectionView" destination="ALL-hF-fY1" id="RQz-tQ-0Vz"/>
                         <outlet property="badgesLabel" destination="FsR-ad-exf" id="3qh-WJ-SIz"/>
@@ -365,6 +366,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="badgesIcon" width="32" height="18"/>
         <image name="check-box-empty" width="102.40000152587891" height="102.40000152587891"/>
+        <image name="curiosityIcon" width="28" height="29"/>
+        <image name="mapIcon" width="44" height="40"/>
     </resources>
 </document>
