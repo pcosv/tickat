@@ -16,7 +16,7 @@ struct AppData {
     // usuário do app
     var user = User(id: "User")
     
-// usuário fake pra teste
+    // usuário fake pra teste
     var userTeste = User(id: "User Teste",
                          unblockedCuriosities: [Curiosity(isBlocked: false, title: "local", shortDescription: "curta", longDescription: "longa", images: [UIImage(named: "foto-teste")!]),
                                                 Curiosity(isBlocked: true,
@@ -97,7 +97,15 @@ struct AppData {
                                                                   shortDescription: "O Casarão está em ruínas, aguardando restauração…",
                                                                   longDescription: "Antigamente, aqui era o Hospital Magitot, o principal centro odontológico dos anos 40. A arquitetura tinha umas pinceladas inglesas, bem chiques. Fechou em 1960, e hoje está num estado precário, o bichin, mesmo sendo considerado imóvel especial de preservação. Os vendedores que estão ao redor lutam pra que ali vire um centro de comércio informal que possa abrigá-los. Pense num lugar com potencial desperdiçado...",
                                                                   images: [UIImage(named: "check-box-empty")!]),
-                                             coordinate: CLLocationCoordinate2D(latitude: -8.048480, longitude: -34.958998))]
+                                             coordinate: CLLocationCoordinate2D(latitude: -8.048480, longitude: -34.958998)),
+                                    Location(isBlocked: true,
+                                             title: "Ponto de ônibus",
+                                             curiosity: Curiosity(isBlocked: true,
+                                                                  title: "Ponto de ônibus",
+                                                                  shortDescription: "Esse ponto de ônibus é bem bonito",
+                                                                  longDescription: "Essa parada de ônibus é bem importante porque passam muitos ônibus por aqui. Ela tem belas manchas de sujeira da importante avenida da UFPE. Atrás dela fica o CIn, um prédio bem engraçado não tinha teto não tinha nada. MAravilhosamente, escreverei aqui palavras bem aleatórias para apenas igualar esse texto às outras descrições longas dos outros locais, para maior verossimilhança.",
+                                                                  images: [UIImage(named: "check-box-empty")!]),
+                                             coordinate: CLLocationCoordinate2D(latitude: -8.055311, longitude: -34.950968))]
     
     
     var allBlockedBadges: [Badge] = [Badge(name: "Primeira Descoberta!",
