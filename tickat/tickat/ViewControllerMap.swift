@@ -22,7 +22,9 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     override func viewDidLoad() {
         drawMap()
         
+        
         if WCSession.isSupported() {
+            connectivitySession = WCSession.default
             self.connectivitySession.delegate = self
             self.connectivitySession.activate()
         }
