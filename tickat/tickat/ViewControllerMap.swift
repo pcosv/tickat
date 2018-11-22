@@ -10,16 +10,22 @@ import UIKit
 import MapKit
 import CoreLocation
 import UserNotifications
+import WatchConnectivity
 
-class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UNUserNotificationCenterDelegate {
+class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UNUserNotificationCenterDelegate, WCSessionDelegate {
     @IBOutlet weak var map: MKMapView!
-    
+    var connectivitySession: WCSession!
     
     var locationManager:CLLocationManager!
     
     
     override func viewDidLoad() {
         drawMap()
+        
+        if WCSession.isSupported() {
+            self.connectivitySession.delegate = self
+            self.connectivitySession.activate()
+        }
         
         map.register(LocationMarkerView.self,
                      forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
@@ -56,7 +62,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         
         checkForProximity()
-        let userLocation:CLLocation = locations[0] as CLLocation
+        let _:CLLocation = locations[0] as CLLocation
         
         // Call stopUpdatingLocation() to stop listening for location updates,
         // other wise this function will be called every time when user location changes.
@@ -86,4 +92,24 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
             map.addAnnotation(i)
         }
     }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    func sendInformationToWatch(){
+        do {
+            try self.connectivitySession.updateApplicationContext(["":""])
+        } catch {
+            print("Unexpected error: \(error).")
+        }
+    }
+    
 }
