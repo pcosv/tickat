@@ -22,7 +22,10 @@ extension ViewControllerMap: MKMapViewDelegate{
         
         var selectedCuriosity = selectedLocation?.curiosity
         
-        print("fihasvdhgjfajvsgf")
-        
+        if let curiosity = selectedCuriosity{
+            sendInformationToWatch(curiosity: curiosity)
+        } else {
+            print("Error, not a curiosity")
+        }
     }
 }
