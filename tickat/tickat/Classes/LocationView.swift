@@ -12,6 +12,7 @@ import MapKit
 class LocationMarkerView: MKAnnotationView {
     override var annotation: MKAnnotation? {
         willSet {
+//            self.isEnabled = false
             guard let location = newValue as? Location else { return }
             //markerTintColor = location.markerTintColor
             

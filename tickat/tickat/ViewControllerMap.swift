@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import UserNotifications
 
-class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UNUserNotificationCenterDelegate {
+class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
     @IBOutlet weak var map: MKMapView!
     
     
