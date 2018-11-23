@@ -1,23 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="WLp-9s-NHB">
+            <objects>
+                <controller id="VSH-fL-BGq">
+                    <items>
+                        <imageView width="45" alignment="center" id="jLX-pD-jcu"/>
+                        <label alignment="center" text="Label" numberOfLines="0" id="qjL-jE-5Q3"/>
+                        <separator alignment="left" id="9Uc-Ic-eSw"/>
+                        <label alignment="center" text="Label" numberOfLines="0" id="26j-RM-0b2"/>
+                        <button width="1" alignment="left" title="voltar" id="YFT-OJ-dqH"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="207" y="-472"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="sVE-fw-Aup">
+            <objects>
+                <controller id="EiB-cX-lPj">
+                    <items>
+                        <label alignment="center" text="title" textAlignment="center" numberOfLines="0" id="CmX-g9-B9n"/>
+                        <separator alignment="left" id="cgA-B3-Ied"/>
+                        <label alignment="center" text="shortDescription" textAlignment="center" numberOfLines="0" id="EbU-qG-cGJ"/>
+                        <separator alignment="left" id="B4M-gK-JSu"/>
+                        <label width="136" alignment="left" text="leia mais no iphone" textAlignment="center" numberOfLines="0" id="7xI-XF-bb4"/>
+                        <button width="1" alignment="left" title="voltar ao mapa" id="mIp-Lr-Fm5"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="33"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="fHf-ug-fLy">
+            <objects>
+                <controller id="h69-sM-aXL">
+                    <items>
+                        <imageView width="86" height="85" alignment="center" id="c9J-QE-r7x"/>
+                        <label alignment="center" text="Label" numberOfLines="0" id="Gy6-0Y-NIn"/>
+                        <separator alignment="left" id="af9-SM-Cwj"/>
+                        <label alignment="center" text="Label" numberOfLines="0" id="l17-ds-eOr"/>
+                        <button width="1" alignment="left" title="receber medalha" id="fVp-e7-luS"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="579" y="33"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="tickat_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Label" id="M3J-rM-6G6"/>
+                        <map height="150" alignment="left" id="N0q-Dp-S9H"/>
                     </items>
-                    <connections>
-                        <outlet property="labelText" destination="M3J-rM-6G6" id="0zu-2U-6DD"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
@@ -37,21 +80,21 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="220" y="733"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="tickat_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="579" y="733"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="tickat_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="579" y="345"/>
         </scene>
     </scenes>
 </document>

@@ -9,11 +9,12 @@
 import WatchKit
 import Foundation
 import WatchConnectivity
+import MapKit
 
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var connectivitySession: WCSession!
-    @IBOutlet weak var labelText: WKInterfaceLabel!
+    // @IBOutlet weak var labelText: WKInterfaceLabel!
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -43,6 +44,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        self.labelText.setText(applicationContext["title"] as! String)
+        // self.labelText.setText(applicationContext["title"] as! String)
     }
 }
