@@ -25,6 +25,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
         drawMap()
         
         if WCSession.isSupported() {
+            self.connectivitySession = WCSession.default
             self.connectivitySession.delegate = self
             self.connectivitySession.activate()
         }
@@ -108,7 +109,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
     }
     func sendInformationToWatch(curiosity: Curiosity){
         do {
-            try self.connectivitySession.updateApplicationContext(["title":curiosity.title])
+            try self.connectivitySession.updateApplicationContext(["title":curiosity])
         } catch {
             print("Unexpected error: \(error).")
         }

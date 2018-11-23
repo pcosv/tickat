@@ -26,7 +26,6 @@ extension ViewControllerMap{
         
         // varre o array verificando e desbloqueia o local e a curiosidade associada
         for i in AppData.shared.allLocations{
-<<<<<<< HEAD
             if i.isBlocked{
                 //print(i.isBlocked)
                 var aux = CLLocation(latitude: i.coordinate.latitude, longitude: i.coordinate.longitude)
@@ -41,18 +40,6 @@ extension ViewControllerMap{
                     self.drawMap()
                     // notifyUser(i)
                 }
-=======
-            //print(i.isBlocked)
-            let aux = CLLocation(latitude: i.coordinate.latitude, longitude: i.coordinate.longitude)
-            
-            let distanceInMeters = currentLocation.distance(from: aux) // result is in meters
-            //print(distanceInMeters)
-            if distanceInMeters <= 30 {
-                i.isBlocked = false
-                print(i.isBlocked)
-                i.curiosity.unblockCuriosity()
-                // notifyUser(i)
->>>>>>> 9d4fe6507e8b84a99789f17b3b5e9b3f4916160b
             }
         }
     }

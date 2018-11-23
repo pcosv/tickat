@@ -31,6 +31,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.willActivate()
         
         if WCSession.isSupported() {
+            self.connectivitySession = WCSession.default
             self.connectivitySession.delegate = self
             self.connectivitySession.activate()
         }
