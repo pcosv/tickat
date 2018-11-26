@@ -8,10 +8,9 @@
 
 import MapKit
 
-extension ViewControllerMap: MKMapViewDelegate{
+extension ViewControllerMap: MKMapViewDelegate {
     
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
         var selectedLocation:Location? = nil
         
         for i in AppData.shared.allLocations{
@@ -20,12 +19,30 @@ extension ViewControllerMap: MKMapViewDelegate{
             }
         }
         
-        var selectedCuriosity = selectedLocation?.curiosity
-        
-        if let curiosity = selectedCuriosity{
-            sendInformationToWatch(curiosity: curiosity)
+        if ((selectedLocation?.isBlocked) ?? true){
+            //open Pop Up
         } else {
-            print("Error, not a curiosity")
+            self.tabBarController?.selectedIndex = 1
         }
     }
+    
+//        Teste de Conectividade com o Watch 
+//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+//        var selectedLocation:Location? = nil
+//
+//        for i in AppData.shared.allLocations{
+//            if i.title == view.annotation?.title{
+//                selectedLocation = i
+//            }
+//        }
+//
+//        let selectedCuriosity = selectedLocation?.curiosity
+//
+//        if let curiosity = selectedCuriosity{
+//            sendInformationToWatch(curiosity: curiosity)
+//        } else {
+//            print("Error, not a curiosity")
+//        }
+//    }
+
 }

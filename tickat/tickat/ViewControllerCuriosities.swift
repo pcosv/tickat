@@ -11,13 +11,13 @@ import Foundation
 
 class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var curiositiesTableView: UITableView!
-    @IBOutlet weak var curiositiesLabel: UILabel!
     
     //outlets do popup
+    @IBOutlet weak var longDescriptionCuriosityPopUp: UITextView!
     @IBOutlet var popUpCuriosities: UIView!
     @IBOutlet weak var imageCuriosityPopUp: UIImageView!
     @IBOutlet weak var titleCuriosityPopUp: UILabel!
-    @IBOutlet weak var longDescriptionCuriosityPopUp: UILabel!
+    //@IBOutlet weak var longDescriptionCuriosityPopUp: UILabel!
     @IBAction func dismissPopUp(_ sender: Any) {
         dismissPopUp(popUp: popUpCuriosities)
     }
@@ -72,29 +72,47 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
         //popUp.bounds.height = self.view.bounds.height
         // popUp.sizeThatFits(self.view!.frame)
         //  bgColorView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
-        popUp.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 50, height: self.view.frame.height - 50)
+//        popUp.frame = CGRect(x: 0, y: 0, width: self.view.frame.width - 50, height: self.view.frame.height - 50)
+        popUp.layer.cornerRadius = 20
+        popUp.layer.masksToBounds = true
+
         // popUp.frame = self.view.frame
         popUp.center = self.view.center
         // openBlur()
         // self.view.isUserInteractionEnabled = false
         
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
         
-        self.view.addSubview(popUp)
+        if !UIAccessibility.isReduceTransparencyEnabled {
+            view.backgroundColor = .clear
+            
+            //always fill the view
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            view.insertSubview(blurEffectView, at: 1)
+        } else {
+            view.backgroundColor = .black
+        }
+        
+        view.insertSubview(popUp, at: 2)
         
         popUp.transform = CGAffineTransform(scaleX: 0, y: 0)
+        blurEffectView.transform = CGAffineTransform(scaleX: 0, y: 0)
 
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
             popUp.alpha = 1.0;
+            blurEffectView.alpha = 1.0;
             popUp.transform = .identity
+            blurEffectView.transform = .identity
         }, completion: nil)
         
-        popUp.layer.cornerRadius = 20
-        popUp.layer.masksToBounds = true
     }
     
     
     func dismissPopUp(popUp:UIView) {
-        
+        view.subviews[1].removeFromSuperview()
         popUp.removeFromSuperview()
         // closeBlur()
     }

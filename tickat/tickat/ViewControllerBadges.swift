@@ -10,9 +10,7 @@ import UIKit
 
 class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    @IBOutlet weak var badgesCollectionView: UICollectionView!
-    @IBOutlet weak var badgesLabel: UILabel!
- 
+    @IBOutlet weak var badgesCollectionView: UICollectionView! 
     
     // PopUp da Badge
     @IBOutlet var popUpBadge: UIView!
@@ -77,11 +75,40 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
         // openBlur()
         // self.view.isUserInteractionEnabled = false
         self.view.addSubview(popUp)
+        
+        
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        
+        if !UIAccessibility.isReduceTransparencyEnabled {
+            view.backgroundColor = .clear
+            
+            //always fill the view
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            view.insertSubview(blurEffectView, at: 1)
+        } else {
+            view.backgroundColor = .black
+        }
+        
+        view.insertSubview(popUp, at: 2)
+        
+        blurEffectView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        popUp.transform = CGAffineTransform(scaleX: 0, y: 0)
+        
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+            popUp.alpha = 1.0;
+            blurEffectView.alpha = 1.0;
+            popUp.transform = .identity
+            blurEffectView.transform = .identity
+        }, completion: nil)
       
     }
     
     
     func dismissPopUp(popUp:UIView) {
+        view.subviews[1].removeFromSuperview()
         popUp.removeFromSuperview()
         // closeBlur()
 
