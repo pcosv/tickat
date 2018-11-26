@@ -77,12 +77,24 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
         popUp.center = self.view.center
         // openBlur()
         // self.view.isUserInteractionEnabled = false
+        
+        
         self.view.addSubview(popUp)
         
+        popUp.transform = CGAffineTransform(scaleX: 0, y: 0)
+
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+            popUp.alpha = 1.0;
+            popUp.transform = .identity
+        }, completion: nil)
+        
+        popUp.layer.cornerRadius = 20
+        popUp.layer.masksToBounds = true
     }
     
     
     func dismissPopUp(popUp:UIView) {
+        
         popUp.removeFromSuperview()
         // closeBlur()
     }
