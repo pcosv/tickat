@@ -20,6 +20,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
     
     var locationManager:CLLocationManager!
     
+    @IBOutlet var popUpCallToAction: UIView!
     
     override func viewDidLoad() {
         drawMap()
@@ -115,4 +116,8 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
         }
     }
     
+    @IBAction func closePopUp(_ sender: Any) {
+        view.subviews[1].removeFromSuperview()
+        popUpCallToAction.removeFromSuperview()
+    }
 }

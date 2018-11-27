@@ -32,9 +32,39 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
         curiositiesTableView.dataSource = self
     }
     
+    
+    // Reload data when trasitioned between tab bar
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.curiositiesTableView.reloadData()
+    }
+    
     // Vê a quantidade de itens na TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.shared.userTeste.unblockedCuriosities.count
+        self.curiositiesTableView.separatorStyle = .none
+        
+        let curiosityCount = AppData.shared.user.unblockedCuriosities.count
+        
+        // Add call to action label if is empty and remove if its not
+        if (curiosityCount == 0){
+            
+            for subview in view.subviews{
+                if subview.isKind(of: UILabel.self){
+                    subview.removeFromSuperview()
+                }
+            }
+            
+            
+            let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0.8*self.view.frame.width, height: 100))
+            label.textColor = .white
+            label.numberOfLines = 2
+            label.textAlignment = NSTextAlignment.center
+            label.text = "Explore a cidade e descubra curiosidades!"
+            label.center = self.view.center
+            self.view.addSubview(label)
+        }
+        
+        return curiosityCount
     }
     
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -46,8 +76,8 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tableCell:CuriositiesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "curiositiesCell", for: indexPath) as! CuriositiesTableViewCell
         
-        tableCell.curiosityTitle?.text = AppData.shared.userTeste.unblockedCuriosities[indexPath.row].title
-        tableCell.curiosityText?.text = AppData.shared.userTeste.unblockedCuriosities[indexPath.row].shortDescription
+        tableCell.curiosityTitle?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].title
+        tableCell.curiosityText?.text = AppData.shared.user.unblockedCuriosities[indexPath.row].shortDescription
         self.curiositiesTableView.separatorStyle = .none
         tableCell.curiositiesContentView.layer.cornerRadius = 20
         tableCell.curiositiesContentView.layer.masksToBounds = true
@@ -57,9 +87,9 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
     
     // pra quando toca numa célula
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        imageCuriosityPopUp.image = AppData.shared.userTeste.unblockedCuriosities[indexPath.row].images[0]
-        titleCuriosityPopUp.text = AppData.shared.userTeste.unblockedCuriosities[indexPath.row].title
-        longDescriptionCuriosityPopUp.text = AppData.shared.userTeste.unblockedCuriosities[indexPath.row].longDescription
+        imageCuriosityPopUp.image = AppData.shared.user.unblockedCuriosities[indexPath.row].images[0]
+        titleCuriosityPopUp.text = AppData.shared.user.unblockedCuriosities[indexPath.row].title
+        longDescriptionCuriosityPopUp.text = AppData.shared.user.unblockedCuriosities[indexPath.row].longDescription
         openPopUp(popUp: popUpCuriosities)
     }
     

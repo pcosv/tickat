@@ -31,11 +31,40 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
         badgesCollectionView.delegate = self
     }
     
-    
+    // Reload data when trasitioned between tab bar
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.badgesCollectionView.reloadData()
+    }
     
     // Number Of Items in Section   (Data Source)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppData.shared.userTeste.badges.count  // quantidade de badges desbloqueadas do usuário
+        let badgesCount = AppData.shared.user.badges.count
+        
+        // Add call to action label if is empty and remove if its not
+        if (badgesCount == 0){
+            
+            for subview in view.subviews{
+                if subview.isKind(of: UILabel.self){
+                    subview.removeFromSuperview()
+                }
+            }
+            
+            let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0.8*self.view.frame.width, height: 100))
+            label.textColor = .white
+            label.numberOfLines = 2
+            label.textAlignment = NSTextAlignment.center
+            label.text = "Descubra curiosidades para ganhar medalhas!"
+            label.center = self.view.center
+
+//            label.translatesAutoresizingMaskIntoConstraints = false
+//            label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//            label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+
+            self.view.addSubview(label)
+        }
+        
+        return badgesCount
     }
     
     // Cell For Item At   (Data Source)
@@ -46,9 +75,9 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
         cell.layer.masksToBounds = true
         cell.badgeImage.image = AppData.shared.userTeste.badges[indexPath.row].image
         // como aqui são ícones não precisa, mais indicado pra as fotos
-        // cell.badgeImage.layer.cornerRadius = 100
-        // cell.badgeImage.layer.masksToBounds = true
-        cell.badgeName.text = AppData.shared.userTeste.badges[indexPath.row].name
+//        cell.badgeImage.layer.cornerRadius = 100
+//        cell.badgeImage.layer.masksToBounds = true
+        cell.badgeName.text = AppData.shared.user.badges[indexPath.row].name
         
         
         return cell
@@ -58,9 +87,9 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
     // Did Select Item At   (Delegate)
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // pop up explicando como a badge foi ganha ou algo do tipo
-        iconBadgePopUp.image = AppData.shared.userTeste.badges[indexPath.row].image
-        nameBadgePopUp.text = AppData.shared.userTeste.badges[indexPath.row].name
-        textBadgePopUp.text = AppData.shared.userTeste.badges[indexPath.row].description
+        iconBadgePopUp.image = AppData.shared.user.badges[indexPath.row].image
+        nameBadgePopUp.text = AppData.shared.user.badges[indexPath.row].name
+        textBadgePopUp.text = AppData.shared.user.badges[indexPath.row].description
         openPopUp(popUp: popUpBadge)
     }
     

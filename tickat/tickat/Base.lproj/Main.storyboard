@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Curiosities-->
+        <!--Curiosidades-->
         <scene sceneID="SDg-Ep-ooM">
             <objects>
                 <viewController id="81h-FQ-HU8" customClass="ViewControllerCuriosities" customModule="tickat" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zMm-mf-DCU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Curiosities" image="curiosityIcon" id="5Th-0Z-Mgn"/>
+                    <tabBarItem key="tabBarItem" title="Curiosidades" image="curiosityIcon" id="5Th-0Z-Mgn"/>
                     <connections>
                         <outlet property="curiositiesTableView" destination="kuB-SI-ogO" id="Oio-Cm-Za7"/>
                         <outlet property="imageCuriosityPopUp" destination="uuw-LU-5we" id="Ey2-VW-3MP"/>
@@ -116,7 +116,7 @@
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YE6-Y9-xaD">
-                            <rect key="frame" x="36" y="462" width="246" height="38"/>
+                            <rect key="frame" x="36" y="462" width="248" height="38"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                             <state key="normal" title="voltar">
@@ -147,7 +147,7 @@
                         <constraint firstItem="YE6-Y9-xaD" firstAttribute="centerX" secondItem="N3o-kd-6UY" secondAttribute="centerX" id="cbR-5P-wwa"/>
                         <constraint firstItem="N3o-kd-6UY" firstAttribute="trailing" secondItem="3kd-CD-nLd" secondAttribute="trailing" constant="38" id="eMY-fN-dQl"/>
                         <constraint firstItem="uuw-LU-5we" firstAttribute="leading" secondItem="N3o-kd-6UY" secondAttribute="leading" id="fZT-vd-HZc"/>
-                        <constraint firstItem="N3o-kd-6UY" firstAttribute="trailing" secondItem="YE6-Y9-xaD" secondAttribute="trailing" constant="38" id="k01-Yk-wFj"/>
+                        <constraint firstItem="N3o-kd-6UY" firstAttribute="trailing" secondItem="YE6-Y9-xaD" secondAttribute="trailing" constant="36" id="k01-Yk-wFj"/>
                         <constraint firstItem="N3o-kd-6UY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jBk-8B-Vj0" secondAttribute="trailing" constant="20" id="qa7-te-mme"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="N3o-kd-6UY"/>
@@ -155,7 +155,7 @@
             </objects>
             <point key="canvasLocation" x="-818.39999999999998" y="-486.20689655172418"/>
         </scene>
-        <!--Map-->
+        <!--Mapa-->
         <scene sceneID="wYV-P3-rzZ">
             <objects>
                 <viewController id="1Mn-FE-pe7" customClass="ViewControllerMap" customModule="tickat" customModuleProvider="target" sceneMemberID="viewController">
@@ -176,55 +176,61 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cU2-qW-Ae6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="mapIcon" id="Qsn-3i-Drt"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapIcon" id="Qsn-3i-Drt"/>
                     <connections>
                         <outlet property="map" destination="IWi-II-q7i" id="oYB-f7-cLb"/>
+                        <outlet property="popUpCallToAction" destination="Ddt-D8-eyl" id="zMN-Av-0dT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Anm-Dl-Mf2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="Ddt-D8-eyl" userLabel="Pop Up Call to Action">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="320"/>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lockCall" translatesAutoresizingMaskIntoConstraints="NO" id="7Hd-EB-hHU">
-                            <rect key="frame" x="69" y="30" width="102" height="102"/>
+                            <rect key="frame" x="69" y="30" width="107" height="107"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="7Hd-EB-hHU" secondAttribute="height" multiplier="1:1" id="zer-pK-UFH"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwy-qc-DHg">
-                            <rect key="frame" x="190" y="20" width="30" height="33"/>
+                            <rect key="frame" x="194" y="20" width="30" height="30"/>
                             <state key="normal" title="x">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="closePopUp:" destination="1Mn-FE-pe7" eventType="touchUpInside" id="KRa-1q-Y4d"/>
+                            </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venha aqui descobrir!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YqP-HK-BIA">
-                            <rect key="frame" x="16" y="241" width="208" height="20"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que será que tem aqui?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-hV-8wU">
+                            <rect key="frame" x="16" y="155" width="207" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que tem aqui?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb2-hV-8wU">
-                            <rect key="frame" x="54" y="161" width="132" height="22"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passa aqui e descobre!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DS-jB-haV">
+                            <rect key="frame" x="18" y="194.5" width="207" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="cQq-HB-if6" firstAttribute="bottom" secondItem="Dwy-qc-DHg" secondAttribute="bottom" constant="190" id="52b-20-Md2"/>
+                        <constraint firstItem="2DS-jB-haV" firstAttribute="leading" secondItem="cQq-HB-if6" secondAttribute="leading" constant="18" id="5lh-JB-2Om"/>
                         <constraint firstItem="7Hd-EB-hHU" firstAttribute="leading" secondItem="cQq-HB-if6" secondAttribute="leading" constant="69" id="61F-tb-dfk"/>
-                        <constraint firstItem="Pb2-hV-8wU" firstAttribute="centerX" secondItem="cQq-HB-if6" secondAttribute="centerX" id="7nJ-qQ-uWu"/>
-                        <constraint firstItem="cQq-HB-if6" firstAttribute="bottom" secondItem="Dwy-qc-DHg" secondAttribute="bottom" constant="267" id="A78-zD-Dx0"/>
-                        <constraint firstItem="Dwy-qc-DHg" firstAttribute="top" secondItem="cQq-HB-if6" secondAttribute="top" constant="20" id="C2J-KO-6Oo"/>
-                        <constraint firstItem="YqP-HK-BIA" firstAttribute="top" secondItem="Pb2-hV-8wU" secondAttribute="bottom" constant="58" id="Hg9-wx-Gqb"/>
-                        <constraint firstItem="YqP-HK-BIA" firstAttribute="centerX" secondItem="cQq-HB-if6" secondAttribute="centerX" id="HsV-Dk-Xib"/>
+                        <constraint firstItem="cQq-HB-if6" firstAttribute="trailing" secondItem="2DS-jB-haV" secondAttribute="trailing" constant="15" id="FuP-Zj-DIE"/>
+                        <constraint firstItem="Dwy-qc-DHg" firstAttribute="leading" secondItem="cQq-HB-if6" secondAttribute="leading" constant="194" id="G7J-Jq-C9Z"/>
                         <constraint firstItem="7Hd-EB-hHU" firstAttribute="top" secondItem="cQq-HB-if6" secondAttribute="top" constant="30" id="JwY-8C-9xw"/>
-                        <constraint firstItem="cQq-HB-if6" firstAttribute="trailing" secondItem="Dwy-qc-DHg" secondAttribute="trailing" constant="20" id="PVe-ra-Cf1"/>
-                        <constraint firstItem="Dwy-qc-DHg" firstAttribute="leading" secondItem="cQq-HB-if6" secondAttribute="leading" constant="190" id="WZZ-yI-gH5"/>
-                        <constraint firstItem="Pb2-hV-8wU" firstAttribute="top" secondItem="7Hd-EB-hHU" secondAttribute="bottom" constant="25" id="epp-9w-4wD"/>
-                        <constraint firstItem="cQq-HB-if6" firstAttribute="trailing" secondItem="YqP-HK-BIA" secondAttribute="trailing" constant="16" id="ynl-C7-IUm"/>
-                        <constraint firstItem="YqP-HK-BIA" firstAttribute="leading" secondItem="cQq-HB-if6" secondAttribute="leading" constant="16" id="zcV-Jw-zSK"/>
+                        <constraint firstItem="Dwy-qc-DHg" firstAttribute="top" secondItem="cQq-HB-if6" secondAttribute="top" constant="20" id="Xh6-aN-gOm"/>
+                        <constraint firstItem="cQq-HB-if6" firstAttribute="bottom" secondItem="2DS-jB-haV" secondAttribute="bottom" constant="25" id="Xut-XS-asM"/>
+                        <constraint firstItem="2DS-jB-haV" firstAttribute="centerX" secondItem="cQq-HB-if6" secondAttribute="centerX" id="ZZn-5d-2hd"/>
+                        <constraint firstItem="Pb2-hV-8wU" firstAttribute="top" secondItem="7Hd-EB-hHU" secondAttribute="bottom" constant="19" id="dZY-ah-QfK"/>
+                        <constraint firstItem="cQq-HB-if6" firstAttribute="trailing" secondItem="Dwy-qc-DHg" secondAttribute="trailing" constant="16" id="evB-Ec-HwO"/>
+                        <constraint firstItem="Pb2-hV-8wU" firstAttribute="centerX" secondItem="cQq-HB-if6" secondAttribute="centerX" id="fcr-aR-p2j"/>
+                        <constraint firstItem="Pb2-hV-8wU" firstAttribute="leading" secondItem="cQq-HB-if6" secondAttribute="leading" constant="16" id="ida-JQ-rvJ"/>
+                        <constraint firstItem="cQq-HB-if6" firstAttribute="trailing" secondItem="Pb2-hV-8wU" secondAttribute="trailing" constant="17" id="tfg-uH-5hd"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="cQq-HB-if6"/>
                 </view>
@@ -252,7 +258,7 @@
             </objects>
             <point key="canvasLocation" x="-1817" y="-934"/>
         </scene>
-        <!--Badges-->
+        <!--Medalhas-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewControllerBadges" customModule="tickat" customModuleProvider="target" sceneMemberID="viewController">
@@ -320,7 +326,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Badges" image="badgesIcon" id="bqK-no-g5i"/>
+                    <tabBarItem key="tabBarItem" title="Medalhas" image="badgesIcon" id="bqK-no-g5i"/>
                     <connections>
                         <outlet property="badgesCollectionView" destination="ALL-hF-fY1" id="RQz-tQ-0Vz"/>
                         <outlet property="iconBadgePopUp" destination="0om-YE-Gxa" id="wjP-C1-MxU"/>
