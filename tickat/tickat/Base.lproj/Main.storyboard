@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="knW-XR-0W8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CrZ-hv-k8w">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -237,6 +237,81 @@
             </objects>
             <point key="canvasLocation" x="-818.39999999999998" y="-1737.481259370315"/>
         </scene>
+        <!--Onboarding Page View Controller-->
+        <scene sceneID="AyF-WK-wwu">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="CrZ-hv-k8w" customClass="OnboardingPageViewController" customModule="tickat" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynr-j0-0W3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4502" y="-934"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RDT-IQ-oLj">
+            <objects>
+                <viewController storyboardIdentifier="onboardingPage1" id="DN7-47-Cso" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bOQ-dn-86s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding1" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-ni-ttB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="S3r-W4-Mjl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MN-uq-jo3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3818.4000000000001" y="-930.58470764617698"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0B2-yd-4iO">
+            <objects>
+                <viewController storyboardIdentifier="onboardingPage2" id="XDH-6X-UwB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rxd-eS-6yz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding2" translatesAutoresizingMaskIntoConstraints="NO" id="9KN-aS-Ub4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9U6-ba-9fB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bq-HJ-l6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3169" y="-931"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Cgb-ZV-SKe">
+            <objects>
+                <viewController storyboardIdentifier="onboardingPage3" id="1qV-4v-3IT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBt-oO-i60">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding3" translatesAutoresizingMaskIntoConstraints="NO" id="Pj0-RY-MNw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lix-bL-KTg">
+                                <rect key="frame" x="50" y="567" width="274" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GRA-43-Lge"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnC-Fd-yDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2533.5999999999999" y="-930.58470764617698"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ecM-D1-wzQ">
             <objects>
@@ -370,6 +445,8 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="pBE-kw-tBf" firstAttribute="trailing" secondItem="0om-YE-Gxa" secondAttribute="trailing" constant="69" id="0Mq-MA-3eW"/>
+                        <constraint firstItem="0om-YE-Gxa" firstAttribute="leading" secondItem="pBE-kw-tBf" secondAttribute="leading" constant="69" id="0Po-Gr-621"/>
                         <constraint firstItem="5J4-Zu-xfB" firstAttribute="top" secondItem="pBE-kw-tBf" secondAttribute="top" constant="20" id="84R-E2-rDg"/>
                         <constraint firstItem="0om-YE-Gxa" firstAttribute="centerX" secondItem="pBE-kw-tBf" secondAttribute="centerX" id="CLv-5x-GWQ"/>
                         <constraint firstItem="pBE-kw-tBf" firstAttribute="trailing" secondItem="5J4-Zu-xfB" secondAttribute="trailing" constant="16" id="DUh-p0-3yL"/>
@@ -395,5 +472,8 @@
         <image name="curiosityIcon" width="53" height="56"/>
         <image name="lockCall" width="106" height="106"/>
         <image name="mapIcon" width="44" height="40"/>
+        <image name="onboarding1" width="1242" height="2208"/>
+        <image name="onboarding2" width="1243" height="2208"/>
+        <image name="onboarding3" width="1243" height="2208"/>
     </resources>
 </document>
