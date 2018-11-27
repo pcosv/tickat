@@ -88,7 +88,7 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
        
         cell.layer.cornerRadius = 20
         cell.layer.masksToBounds = true
-        cell.badgeImage.image = AppData.shared.userTeste.badges[indexPath.row].image
+        cell.badgeImage.image = AppData.shared.user.badges[indexPath.row].image
         // como aqui são ícones não precisa, mais indicado pra as fotos
 //        cell.badgeImage.layer.cornerRadius = 100
 //        cell.badgeImage.layer.masksToBounds = true
