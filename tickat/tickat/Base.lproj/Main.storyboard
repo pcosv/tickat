@@ -253,12 +253,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding1" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-ni-ttB">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onboarding1" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-ni-ttB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sYn-ni-ttB" secondAttribute="height" multiplier="375:647" id="1p6-S1-Wf2"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S3r-W4-Mjl" firstAttribute="top" secondItem="sYn-ni-ttB" secondAttribute="top" id="4Hr-9E-Ufu"/>
+                            <constraint firstItem="sYn-ni-ttB" firstAttribute="centerY" secondItem="S3r-W4-Mjl" secondAttribute="centerY" id="Dh5-0l-NN5"/>
+                            <constraint firstItem="sYn-ni-ttB" firstAttribute="centerX" secondItem="S3r-W4-Mjl" secondAttribute="centerX" id="P7b-7m-W5g"/>
+                            <constraint firstItem="sYn-ni-ttB" firstAttribute="leading" secondItem="S3r-W4-Mjl" secondAttribute="leading" id="wcB-Jb-50H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S3r-W4-Mjl"/>
                     </view>
                 </viewController>
@@ -274,39 +282,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding2" translatesAutoresizingMaskIntoConstraints="NO" id="9KN-aS-Ub4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onboarding2" translatesAutoresizingMaskIntoConstraints="NO" id="9KN-aS-Ub4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9KN-aS-Ub4" secondAttribute="height" multiplier="375:647" id="3zd-tJ-3LJ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9KN-aS-Ub4" firstAttribute="centerX" secondItem="9U6-ba-9fB" secondAttribute="centerX" id="lL9-Bz-LsR"/>
+                            <constraint firstItem="9KN-aS-Ub4" firstAttribute="leading" secondItem="9U6-ba-9fB" secondAttribute="leading" id="oQ0-c3-veW"/>
+                            <constraint firstItem="9U6-ba-9fB" firstAttribute="top" secondItem="9KN-aS-Ub4" secondAttribute="top" id="qAN-dj-FC4"/>
+                            <constraint firstItem="9KN-aS-Ub4" firstAttribute="centerY" secondItem="9U6-ba-9fB" secondAttribute="centerY" id="rf7-CQ-inr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9U6-ba-9fB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bq-HJ-l6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3169" y="-931"/>
+            <point key="canvasLocation" x="-3170.4000000000001" y="-931.48425787106453"/>
         </scene>
-        <!--View Controller-->
+        <!--Last Onboarding Page View Controller-->
         <scene sceneID="Cgb-ZV-SKe">
             <objects>
-                <viewController storyboardIdentifier="onboardingPage3" id="1qV-4v-3IT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingPage3" id="1qV-4v-3IT" customClass="LastOnboardingPageViewController" customModule="tickat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xBt-oO-i60">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="onboarding3" translatesAutoresizingMaskIntoConstraints="NO" id="Pj0-RY-MNw">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lix-bL-KTg">
-                                <rect key="frame" x="50" y="567" width="274" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lix-bL-KTg">
+                                <rect key="frame" x="60" y="566" width="255" height="43"/>
+                                <color key="backgroundColor" red="0.18863280490000001" green="0.1306800806" blue="0.26666998860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lix-bL-KTg" secondAttribute="height" multiplier="137:23" id="wiO-68-BPJ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.18863280490000001" green="0.1306800806" blue="0.26666998860000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="startApp:" destination="1qV-4v-3IT" eventType="touchUpInside" id="c2p-Of-rnY"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="onboarding3" translatesAutoresizingMaskIntoConstraints="NO" id="Pj0-RY-MNw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pj0-RY-MNw" secondAttribute="height" multiplier="375:647" id="DPo-V7-I47"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lix-bL-KTg" firstAttribute="centerX" secondItem="Pj0-RY-MNw" secondAttribute="centerX" id="812-wa-yLQ"/>
+                            <constraint firstItem="Pj0-RY-MNw" firstAttribute="centerX" secondItem="GRA-43-Lge" secondAttribute="centerX" id="Gag-Ax-1WQ"/>
+                            <constraint firstItem="GRA-43-Lge" firstAttribute="top" secondItem="Pj0-RY-MNw" secondAttribute="top" id="Iyf-z6-3pX"/>
+                            <constraint firstItem="Lix-bL-KTg" firstAttribute="trailing" secondItem="Pj0-RY-MNw" secondAttribute="trailing" constant="-60" id="RiV-9e-a2c"/>
+                            <constraint firstItem="Pj0-RY-MNw" firstAttribute="leading" secondItem="GRA-43-Lge" secondAttribute="leading" id="bby-Hn-nTg"/>
+                            <constraint firstItem="Pj0-RY-MNw" firstAttribute="centerY" secondItem="GRA-43-Lge" secondAttribute="centerY" id="hK5-L2-Saf"/>
+                            <constraint firstItem="GRA-43-Lge" firstAttribute="bottom" secondItem="Lix-bL-KTg" secondAttribute="bottom" constant="58" id="sWU-R8-G6m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GRA-43-Lge"/>
                     </view>
+                    <connections>
+                        <segue destination="knW-XR-0W8" kind="show" identifier="startApp" id="Caf-4y-XVB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnC-Fd-yDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

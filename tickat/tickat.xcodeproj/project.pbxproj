@@ -693,7 +693,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -715,7 +715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -738,7 +738,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				IBSC_MODULE = tickat_WatchKit_Extension;
 				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
@@ -757,7 +757,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				IBSC_MODULE = tickat_WatchKit_Extension;
 				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
@@ -775,7 +775,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -793,7 +793,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -812,7 +812,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -833,7 +833,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -853,7 +853,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -873,7 +873,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

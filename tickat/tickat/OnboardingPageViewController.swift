@@ -87,7 +87,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         self.pageControlDots.currentPage = orderedOnboardingPages.index(of: pageViewController)!
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -98,4 +98,11 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     }
     */
 
+}
+
+class LastOnboardingPageViewController: UIViewController {
+    @IBAction func startApp(_ sender: Any) {
+        performSegue(withIdentifier: "startApp", sender: self)
+    }
+    
 }

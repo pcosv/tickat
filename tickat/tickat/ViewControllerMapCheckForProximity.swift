@@ -32,7 +32,7 @@ extension ViewControllerMap{
                 
                 let distanceInMeters = currentLocation.distance(from: aux) // result is in meters
                 //print(distanceInMeters)
-                if distanceInMeters <= 30 {
+                if distanceInMeters <= 50 {
                     i.isBlocked = false
                     i.curiosity.unblockCuriosity()
                     AppData.shared.user.addCuriosity(newCuriosity: i.curiosity)
