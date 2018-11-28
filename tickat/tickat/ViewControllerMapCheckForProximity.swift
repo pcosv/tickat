@@ -36,7 +36,17 @@ extension ViewControllerMap{
                     i.isBlocked = false
                     i.curiosity.unblockCuriosity()
                     AppData.shared.user.addCuriosity(newCuriosity: i.curiosity)
-                    AppData.shared.user.checkForBadges()
+                    print(i.title)
+                    for j in AppData.shared.allBlockedBadges{
+                        print(j.location)
+                        if (j.isBlocked){
+                            if j.location == i.title! {
+                                j.unblockBadge()
+                                AppData.shared.user.addBadge(newBadge: j)
+                            }
+                        }
+                    }
+                    
                     map.removeAnnotations(map.annotations)
                     self.drawMap()
                     // notifyUser(i)

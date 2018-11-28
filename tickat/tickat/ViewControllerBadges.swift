@@ -46,6 +46,7 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
             
             for subview in view.subviews{
                 if subview.isKind(of: UILabel.self){
+                    view.removeConstraints(subview.constraints)
                     subview.removeFromSuperview()
                 }
             }
@@ -61,7 +62,21 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
 //            label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 //            label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
+            label.translatesAutoresizingMaskIntoConstraints = false
+            
             self.view.addSubview(label)
+            
+            self.view.addConstraints([NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: 0.8*self.view.frame.width),
+                                      NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 64),
+                                      NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0),
+                                      NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)])
+        } else {
+            for subview in view.subviews{
+                if subview.isKind(of: UILabel.self){
+                    view.removeConstraints(subview.constraints)
+                    subview.removeFromSuperview()
+                }
+            }
         }
         
         return badgesCount
@@ -73,7 +88,7 @@ class ViewControllerBadges: UIViewController, UICollectionViewDataSource, UIColl
        
         cell.layer.cornerRadius = 20
         cell.layer.masksToBounds = true
-        cell.badgeImage.image = AppData.shared.userTeste.badges[indexPath.row].image
+        cell.badgeImage.image = AppData.shared.user.badges[indexPath.row].image
         // como aqui são ícones não precisa, mais indicado pra as fotos
 //        cell.badgeImage.layer.cornerRadius = 100
 //        cell.badgeImage.layer.masksToBounds = true

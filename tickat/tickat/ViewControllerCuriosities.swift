@@ -50,18 +50,36 @@ class ViewControllerCuriosities: UIViewController, UITableViewDelegate, UITableV
             
             for subview in view.subviews{
                 if subview.isKind(of: UILabel.self){
+                    view.removeConstraints(subview.constraints)
                     subview.removeFromSuperview()
                 }
             }
             
             
             let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0.8*self.view.frame.width, height: 100))
+            
+            
             label.textColor = .white
             label.numberOfLines = 2
             label.textAlignment = NSTextAlignment.center
             label.text = "Explore a cidade e descubra curiosidades!"
             label.center = self.view.center
+            
+            label.translatesAutoresizingMaskIntoConstraints = false
+            
             self.view.addSubview(label)
+            
+            self.view.addConstraints([NSLayoutConstraint(item: label, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: 0.8*self.view.frame.width),
+                                      NSLayoutConstraint(item: label, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: 64),
+                                      NSLayoutConstraint(item: label, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0),
+                                      NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)])
+        } else {
+            for subview in view.subviews{
+                if subview.isKind(of: UILabel.self){
+                    view.removeConstraints(subview.constraints)
+                    subview.removeFromSuperview()
+                }
+            }
         }
         
         return curiosityCount
