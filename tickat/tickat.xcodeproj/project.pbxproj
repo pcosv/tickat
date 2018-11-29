@@ -26,6 +26,7 @@
 		3838830521922E8B005C0456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3838830421922E8B005C0456 /* Assets.xcassets */; };
 		387141312199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387141302199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift */; };
 		3DA8844D219CA60D00CBA489 /* ViewControllerMapNotifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8844C219CA60C00CBA489 /* ViewControllerMapNotifyUser.swift */; };
+		3DFAB32A21ADE02800E46D1B /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAB32921ADE02800E46D1B /* OnboardingPageViewController.swift */; };
 		952897132194B897000B1ABC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897122194B897000B1ABC /* User.swift */; };
 		952897152194B8A6000B1ABC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897142194B8A6000B1ABC /* Location.swift */; };
 		9534D5E0219CB03C000DC4D9 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534D5DF219CB03C000DC4D9 /* LocationView.swift */; };
@@ -130,6 +131,7 @@
 		3838830721922E8B005C0456 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		387141302199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapCheckForProximity.swift; sourceTree = "<group>"; };
 		3DA8844C219CA60C00CBA489 /* ViewControllerMapNotifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapNotifyUser.swift; sourceTree = "<group>"; };
+		3DFAB32921ADE02800E46D1B /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		952897122194B897000B1ABC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		952897142194B8A6000B1ABC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9534D5DF219CB03C000DC4D9 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				383882C721922E89005C0456 /* ViewController.swift */,
 				189716362193823D004A8AAB /* Classes */,
 				383882C921922E89005C0456 /* Main.storyboard */,
+				3DFAB32921ADE02800E46D1B /* OnboardingPageViewController.swift */,
 				A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */,
 				A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */,
 				383882CC21922E89005C0456 /* Assets.xcassets */,
@@ -480,6 +483,7 @@
 				A16F02342193645900D20A92 /* ViewControllerCuriosities.swift in Sources */,
 				A16F0232219363A700D20A92 /* ViewControllerBadges.swift in Sources */,
 				A16F023A2193707F00D20A92 /* CuriositiesTableViewCell.swift in Sources */,
+				3DFAB32A21ADE02800E46D1B /* OnboardingPageViewController.swift in Sources */,
 				383882C821922E89005C0456 /* ViewController.swift in Sources */,
 				3DA8844D219CA60D00CBA489 /* ViewControllerMapNotifyUser.swift in Sources */,
 				189716382193835A004A8AAB /* Curiosity.swift in Sources */,
@@ -697,7 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -719,7 +723,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -742,7 +746,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				IBSC_MODULE = tickat_WatchKit_Extension;
 				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
@@ -761,7 +765,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				IBSC_MODULE = tickat_WatchKit_Extension;
 				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
@@ -779,7 +783,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -798,7 +802,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -818,7 +822,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -839,7 +843,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -859,7 +863,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,7 +883,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DKR9MLJ8T7;
+				DEVELOPMENT_TEAM = 7KT4V85K95;
 				INFOPLIST_FILE = tickatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
