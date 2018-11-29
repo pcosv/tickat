@@ -29,9 +29,13 @@
 		952897132194B897000B1ABC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897122194B897000B1ABC /* User.swift */; };
 		952897152194B8A6000B1ABC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897142194B8A6000B1ABC /* Location.swift */; };
 		9534D5E0219CB03C000DC4D9 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534D5DF219CB03C000DC4D9 /* LocationView.swift */; };
+		A124AC9F21AF24F100185230 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCE4E62199EAB6003E52D5 /* AppData.swift */; };
+		A124ACA021AF257A00185230 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897122194B897000B1ABC /* User.swift */; };
 		A13B1F5C21A874DF001BEC77 /* Curiosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189716372193835A004A8AAB /* Curiosity.swift */; };
 		A13B1F5D21A874E2001BEC77 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18971639219394FE004A8AAB /* Badge.swift */; };
 		A13B1F5E21A874E6001BEC77 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897142194B8A6000B1ABC /* Location.swift */; };
+		A150CEAD21AF388A0070387B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383882CC21922E89005C0456 /* Assets.xcassets */; };
+		A150CEAE21AF388B0070387B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383882CC21922E89005C0456 /* Assets.xcassets */; };
 		A16F0232219363A700D20A92 /* ViewControllerBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F0231219363A700D20A92 /* ViewControllerBadges.swift */; };
 		A16F02342193645900D20A92 /* ViewControllerCuriosities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */; };
 		A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02352193650000D20A92 /* ViewControllerMap.swift */; };
@@ -448,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				383882F321922E8A005C0456 /* Assets.xcassets in Resources */,
+				A150CEAD21AF388A0070387B /* Assets.xcassets in Resources */,
 				383882F121922E89005C0456 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A150CEAE21AF388B0070387B /* Assets.xcassets in Resources */,
 				3838830521922E8B005C0456 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,8 +516,10 @@
 				A13B1F5D21A874E2001BEC77 /* Badge.swift in Sources */,
 				A13B1F5C21A874DF001BEC77 /* Curiosity.swift in Sources */,
 				3838830121922E8A005C0456 /* ExtensionDelegate.swift in Sources */,
+				A124ACA021AF257A00185230 /* User.swift in Sources */,
 				A13B1F5E21A874E6001BEC77 /* Location.swift in Sources */,
 				383882FF21922E8A005C0456 /* InterfaceController.swift in Sources */,
+				A124AC9F21AF24F100185230 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,7 +710,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
@@ -724,7 +732,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -743,7 +751,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Debug;
 		};
@@ -762,7 +770,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -773,6 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -791,6 +800,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
