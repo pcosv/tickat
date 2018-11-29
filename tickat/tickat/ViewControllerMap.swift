@@ -24,7 +24,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
     
     override func viewDidLoad() {
         drawMap()
-        
+        registerForNotifications()
         if WCSession.isSupported() {
             self.connectivitySession = WCSession.default
             self.connectivitySession.delegate = self

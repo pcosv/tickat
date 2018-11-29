@@ -49,7 +49,7 @@ extension ViewControllerMap{
                     
                     map.removeAnnotations(map.annotations)
                     self.drawMap()
-                    // notifyUser(i)
+                    notifyUser()
                 }
             }
         }
