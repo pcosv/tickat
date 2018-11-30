@@ -18,6 +18,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, CLLocationM
     // @IBOutlet weak var labelText: WKInterfaceLabel!
     @IBOutlet weak var map: WKInterfaceMap!
     var locationManager = CLLocationManager()
+    var crownAccumulator = 0.0
+    var rotationMod = 1.0
+    var deltaMap = 0.0004
+    var initMap = 0.010
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -26,15 +30,17 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, CLLocationM
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        crownSequencer.delegate = self
         //mapview setup to show user location
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
-        map.setRegion(MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(exactly: 0.013)!, longitudeDelta: CLLocationDegrees(exactly: 0.013)!)))
+        map.setRegion(MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(exactly: initMap)!, longitudeDelta: CLLocationDegrees(exactly: initMap)!)))
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        crownSequencer.focus()
         
         drawMap()
         
@@ -55,10 +61,32 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, CLLocationM
     }
     
     func drawMap() {
+        var currentLocation: CLLocation!
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways){
+            
+            currentLocation = locationManager.location
+        }
         
         map.removeAllAnnotations()
         // show locations on map
-        for i in AppData.shared.allLocations {
+        let allLocations = AppData.shared.allLocations.sorted(by: { (location1:Location, location2:Location) -> Bool in
+            
+            
+            
+            let location1CLLocation = CLLocation(latitude: location1.coordinate.latitude, longitude: location1.coordinate.longitude)
+            let distance1 = currentLocation.distance(from: location1CLLocation)
+            
+            let location2CLLocation = CLLocation(latitude: location2.coordinate.latitude, longitude: location2.coordinate.longitude)
+            let distance2 = currentLocation.distance(from: location2CLLocation)
+            
+            return distance1 < distance2
+            })
+        
+        map.addAnnotation(currentLocation.coordinate, with: .red)
+        
+        for i in allLocations {
             if(i.isBlocked){
                 map.addAnnotation(i.coordinate, withImageNamed: "locked", centerOffset: CGPoint(x: 0, y: 0))
             } else {

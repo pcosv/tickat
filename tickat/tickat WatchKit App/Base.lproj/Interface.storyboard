@@ -38,7 +38,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="33"/>
+            <point key="canvasLocation" x="825" y="433"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="fHf-ug-fLy">
@@ -79,10 +79,26 @@
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="Aka-jJ-0gF" kind="relationship" relationship="dynamicNotificationInterface" id="uYs-FM-mwH"/>
+                        <segue destination="kSK-bt-60h" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="UJk-Is-p9y"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="733"/>
+        </scene>
+        <!--Dynamic Notification Interface Controller-->
+        <scene sceneID="5CD-ZX-cBd">
+            <objects>
+                <controller id="Aka-jJ-0gF"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="733"/>
+        </scene>
+        <!--Dynamic Interactive Notification Interface Controller-->
+        <scene sceneID="dFm-oZ-qz0">
+            <objects>
+                <controller id="kSK-bt-60h"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="433"/>
         </scene>
     </scenes>
 </document>
