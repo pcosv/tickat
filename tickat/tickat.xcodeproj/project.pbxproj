@@ -29,12 +29,16 @@
 		952897132194B897000B1ABC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897122194B897000B1ABC /* User.swift */; };
 		952897152194B8A6000B1ABC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897142194B8A6000B1ABC /* Location.swift */; };
 		9534D5E0219CB03C000DC4D9 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534D5DF219CB03C000DC4D9 /* LocationView.swift */; };
+		A13B1F5C21A874DF001BEC77 /* Curiosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189716372193835A004A8AAB /* Curiosity.swift */; };
+		A13B1F5D21A874E2001BEC77 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18971639219394FE004A8AAB /* Badge.swift */; };
+		A13B1F5E21A874E6001BEC77 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897142194B8A6000B1ABC /* Location.swift */; };
 		A16F0232219363A700D20A92 /* ViewControllerBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F0231219363A700D20A92 /* ViewControllerBadges.swift */; };
 		A16F02342193645900D20A92 /* ViewControllerCuriosities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02332193645900D20A92 /* ViewControllerCuriosities.swift */; };
 		A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02352193650000D20A92 /* ViewControllerMap.swift */; };
 		A16F023821936F1D00D20A92 /* BadgesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */; };
 		A16F023A2193707F00D20A92 /* CuriositiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */; };
 		A1DCE4E72199EAB6003E52D5 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCE4E62199EAB6003E52D5 /* AppData.swift */; };
+		A1DD2BFD21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD2BFC21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +135,7 @@
 		A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewCell.swift; sourceTree = "<group>"; };
 		A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriositiesTableViewCell.swift; sourceTree = "<group>"; };
 		A1DCE4E62199EAB6003E52D5 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		A1DD2BFC21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapMKMapViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +222,7 @@
 				A1DCE4E62199EAB6003E52D5 /* AppData.swift */,
 				3DA8844C219CA60C00CBA489 /* ViewControllerMapNotifyUser.swift */,
 				A16F02352193650000D20A92 /* ViewControllerMap.swift */,
+				A1DD2BFC21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift */,
 				387141302199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift */,
 				383882D121922E89005C0456 /* Info.plist */,
 			);
@@ -473,6 +479,7 @@
 				189716382193835A004A8AAB /* Curiosity.swift in Sources */,
 				A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */,
 				1897163A219394FE004A8AAB /* Badge.swift in Sources */,
+				A1DD2BFD21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift in Sources */,
 				952897132194B897000B1ABC /* User.swift in Sources */,
 				383882C621922E89005C0456 /* AppDelegate.swift in Sources */,
 				A1DCE4E72199EAB6003E52D5 /* AppData.swift in Sources */,
@@ -500,7 +507,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3838830321922E8A005C0456 /* NotificationController.swift in Sources */,
+				A13B1F5D21A874E2001BEC77 /* Badge.swift in Sources */,
+				A13B1F5C21A874DF001BEC77 /* Curiosity.swift in Sources */,
 				3838830121922E8A005C0456 /* ExtensionDelegate.swift in Sources */,
+				A13B1F5E21A874E6001BEC77 /* Location.swift in Sources */,
 				383882FF21922E8A005C0456 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,7 +689,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -701,7 +711,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = "tickat WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -724,7 +734,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				IBSC_MODULE = tickat_WatchKit_Extension;
 				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
@@ -743,7 +753,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				IBSC_MODULE = tickat_WatchKit_Extension;
 				INFOPLIST_FILE = "tickat WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "iti-malia.tickat.watchkitapp";
@@ -761,7 +771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -779,7 +789,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -798,7 +808,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -819,7 +829,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickatTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -839,7 +849,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -859,7 +869,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCZBA8LA89;
+				DEVELOPMENT_TEAM = DKR9MLJ8T7;
 				INFOPLIST_FILE = tickatUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

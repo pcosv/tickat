@@ -49,6 +49,7 @@ class Location: NSObject, MKAnnotation {
         }
     }
     
+    // 
     var imageName: String? {
         if isBlocked { return "locked" }
         return "unlocked"

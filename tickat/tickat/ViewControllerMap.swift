@@ -12,7 +12,9 @@ import CoreLocation
 import UserNotifications
 import WatchConnectivity
 
-class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UNUserNotificationCenterDelegate, WCSessionDelegate {
+
+class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate, WCSessionDelegate {
+
     @IBOutlet weak var map: MKMapView!
     var connectivitySession: WCSession!
     
@@ -24,7 +26,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         
         if WCSession.isSupported() {
-            connectivitySession = WCSession.default
+            self.connectivitySession = WCSession.default
             self.connectivitySession.delegate = self
             self.connectivitySession.activate()
         }
@@ -106,9 +108,9 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func sessionDidDeactivate(_ session: WCSession) {
         
     }
-    func sendInformationToWatch(){
+    func sendInformationToWatch(curiosity: Curiosity){
         do {
-            try self.connectivitySession.updateApplicationContext(["":""])
+            try self.connectivitySession.updateApplicationContext(["title":curiosity])
         } catch {
             print("Unexpected error: \(error).")
         }

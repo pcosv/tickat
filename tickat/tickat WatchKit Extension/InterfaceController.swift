@@ -9,10 +9,15 @@
 import WatchKit
 import Foundation
 import WatchConnectivity
+import MapKit
 
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
+
+class InterfaceController: WKInterfaceController, WCSessionDelegate, CLLocationManagerDelegate {
     var connectivitySession: WCSession!
+    // @IBOutlet weak var labelText: WKInterfaceLabel!
+    @IBOutlet weak var map: WKInterfaceMap!
+    var locationManager = CLLocationManager()
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -21,8 +26,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+        //mapview setup to show user location
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        map.setRegion(MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(exactly: 50)!, longitudeDelta: CLLocationDegrees(exactly: 50)!)))
     }
     
     override func willActivate() {
@@ -42,6 +49,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        
+        // self.labelText.setText(applicationContext["title"] as! String)
     }
 }
