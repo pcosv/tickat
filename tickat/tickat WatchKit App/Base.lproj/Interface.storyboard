@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
@@ -59,7 +60,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="tickat_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <map height="150" alignment="left" id="N0q-Dp-S9H"/>
+                        <map height="150" alignment="left" enabled="NO" id="N0q-Dp-S9H"/>
                     </items>
                     <connections>
                         <outlet property="map" destination="N0q-Dp-S9H" id="xZt-4u-EuL"/>
@@ -73,31 +74,15 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="Você descobriu uma nova curiosidade!" numberOfLines="0" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="733"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="tickat_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="579" y="733"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
-            <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="tickat_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="579" y="345"/>
         </scene>
     </scenes>
 </document>

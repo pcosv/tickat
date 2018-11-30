@@ -11,10 +11,13 @@ import MapKit
 import CoreLocation
 import UserNotifications
 import WatchConnectivity
+import CoreData
 
 
 class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNotificationCenterDelegate, WCSessionDelegate {
-
+    var locations: [NSManagedObject] = []
+    var user: [NSManagedObject] = []
+    
     @IBOutlet weak var map: MKMapView!
     var connectivitySession: WCSession!
     
