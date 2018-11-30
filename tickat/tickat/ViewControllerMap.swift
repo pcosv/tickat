@@ -20,11 +20,13 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
     
     var locationManager:CLLocationManager!
     
+    @IBOutlet var popUpCallToAction: UIView!
     
     override func viewDidLoad() {
         drawMap()
-        
-        
+
+        registerForNotifications()
+
         if WCSession.isSupported() {
             self.connectivitySession = WCSession.default
             self.connectivitySession.delegate = self
@@ -39,7 +41,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
         map.delegate = self
         map.showsUserLocation = true
         map.mapType = MKMapType(rawValue: 0)!
-        map.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+        map.userTrackingMode = MKUserTrackingMode.follow
         
     }
     
@@ -116,4 +118,15 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
         }
     }
     
+    @IBAction func closePopUp(_ sender: Any) {
+        view.subviews[1].removeFromSuperview()
+        popUpCallToAction.removeFromSuperview()
+    }
+    
+    // método que recentraliza mapa
+    @IBAction func zoomToCurrentLocation(sender: AnyObject) {
+        guard let coordinate = locationManager.location?.coordinate else { return }
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        self.map.setRegion(region, animated: true)
+    }
 }

@@ -28,17 +28,28 @@ extension ViewControllerMap{
         for i in AppData.shared.allLocations{
             if i.isBlocked{
                 //print(i.isBlocked)
-                var aux = CLLocation(latitude: i.coordinate.latitude, longitude: i.coordinate.longitude)
+                let aux = CLLocation(latitude: i.coordinate.latitude, longitude: i.coordinate.longitude)
                 
                 let distanceInMeters = currentLocation.distance(from: aux) // result is in meters
                 //print(distanceInMeters)
-                if distanceInMeters <= 30 {
+                if distanceInMeters <= 50 {
                     i.isBlocked = false
-                    print(i.isBlocked)
                     i.curiosity.unblockCuriosity()
+                    AppData.shared.user.addCuriosity(newCuriosity: i.curiosity)
+                    print(i.title)
+                    for j in AppData.shared.allBlockedBadges{
+                        print(j.location)
+                        if (j.isBlocked){
+                            if j.location == i.title! {
+                                j.unblockBadge()
+                                AppData.shared.user.addBadge(newBadge: j)
+                            }
+                        }
+                    }
+                    
                     map.removeAnnotations(map.annotations)
                     self.drawMap()
-                    // notifyUser(i)
+                    notifyUser()
                 }
             }
         }
