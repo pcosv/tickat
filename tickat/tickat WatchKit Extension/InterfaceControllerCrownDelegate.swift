@@ -22,6 +22,10 @@ extension InterfaceController: WKCrownDelegate{
             crownAccumulator = 0.0
         }
         
+        if initMap <= 0 {
+            initMap = deltaMap
+        }
+        
         map.setRegion(MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(exactly: initMap)!, longitudeDelta: CLLocationDegrees(exactly: initMap)!)))
     }
 }

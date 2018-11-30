@@ -48,7 +48,7 @@ extension ViewControllerMap{
                     
                     map.removeAnnotations(map.annotations)
                     self.drawMap()
-                    notifyUser()
+                    notifyUser(curiosity: i.curiosity)
                 }
             }
         }

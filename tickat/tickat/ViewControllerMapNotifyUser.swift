@@ -13,7 +13,7 @@ import UserNotifications
 extension ViewControllerMap {
     // Asking user for permission
     func registerForNotifications() {
-        UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+        UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
             // Checking if permission granted
@@ -22,10 +22,11 @@ extension ViewControllerMap {
     }
     
     // Sending notification about new curiosity
-    func notifyUser() {
+    func notifyUser(curiosity: Curiosity) {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "Nova curiosidade"
         notificationContent.body = "Você passou por uma nova curiosidade no seu trajeto. Vamos conferir?"
+        notificationContent.subtitle = curiosity.title
         notificationContent.badge = 1
         
         let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)

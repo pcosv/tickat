@@ -24,41 +24,48 @@
             </objects>
             <point key="canvasLocation" x="207" y="-472"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Curiosity Interface Controller-->
         <scene sceneID="sVE-fw-Aup">
             <objects>
-                <controller id="EiB-cX-lPj">
+                <controller id="EiB-cX-lPj" customClass="CuriosityInterfaceController" customModule="tickat_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="title" textAlignment="center" numberOfLines="0" id="CmX-g9-B9n"/>
                         <separator alignment="left" id="cgA-B3-Ied"/>
                         <label alignment="center" text="shortDescription" textAlignment="center" numberOfLines="0" id="EbU-qG-cGJ"/>
                         <separator alignment="left" id="B4M-gK-JSu"/>
                         <label width="136" alignment="left" text="leia mais no iphone" textAlignment="center" numberOfLines="0" id="7xI-XF-bb4"/>
-                        <button width="1" alignment="left" title="voltar ao mapa" id="mIp-Lr-Fm5"/>
+                        <button width="1" alignment="left" title="ir ao mapa" id="mIp-Lr-Fm5">
+                            <connections>
+                                <action selector="openMap" destination="EiB-cX-lPj" id="a1X-s3-KLR"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="shortDescription" destination="EbU-qG-cGJ" id="exm-mS-eT9"/>
+                        <outlet property="titleCuriosity" destination="CmX-g9-B9n" id="jJ8-Kl-8aC"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="825" y="433"/>
+            <point key="canvasLocation" x="237" y="47"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Badge Interface Controller-->
         <scene sceneID="fHf-ug-fLy">
             <objects>
-                <controller id="h69-sM-aXL">
+                <controller id="h69-sM-aXL" customClass="BadgeInterfaceController" customModule="tickat_WatchKit_Extension">
                     <items>
                         <imageView width="86" height="85" alignment="center" id="c9J-QE-r7x"/>
                         <label alignment="center" text="Label" numberOfLines="0" id="Gy6-0Y-NIn"/>
                         <separator alignment="left" id="af9-SM-Cwj"/>
-                        <label alignment="center" text="Label" numberOfLines="0" id="l17-ds-eOr"/>
-                        <button width="1" alignment="left" title="receber medalha" id="fVp-e7-luS"/>
+                        <button width="1" alignment="left" title="voltar ao mapa" id="ZuY-rj-3Ow"/>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="579" y="33"/>
         </scene>
-        <!--Interface Controller-->
+        <!--map-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="tickat_WatchKit_App" customModuleProvider="target">
+                <controller identifier="map" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="tickat_WatchKit_App" customModuleProvider="target">
                     <items>
                         <map height="150" alignment="left" enabled="NO" id="N0q-Dp-S9H"/>
                     </items>
@@ -72,7 +79,7 @@
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <notificationController id="YCC-NB-fut" customClass="NotificationController" customModule="tickat_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Você descobriu uma nova curiosidade!" numberOfLines="0" id="IdU-wH-bcW"/>
                     </items>
@@ -96,7 +103,12 @@
         <!--Dynamic Interactive Notification Interface Controller-->
         <scene sceneID="dFm-oZ-qz0">
             <objects>
-                <controller id="kSK-bt-60h"/>
+                <controller id="kSK-bt-60h">
+                    <items>
+                        <label alignment="left" text="Você descobriu uma nova curiosidade!" numberOfLines="0" id="DUr-RG-k8N"/>
+                        <button width="1" alignment="left" title="ver curiosidade" id="v9o-J8-54C"/>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="520" y="433"/>
         </scene>

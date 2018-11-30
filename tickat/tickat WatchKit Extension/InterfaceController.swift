@@ -35,6 +35,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, CLLocationM
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         map.setRegion(MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(exactly: initMap)!, longitudeDelta: CLLocationDegrees(exactly: initMap)!)))
+        drawMap()
     }
     
     override func willActivate() {
