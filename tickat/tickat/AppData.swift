@@ -136,7 +136,7 @@ struct AppData {
                                      Badge(name: "Caseiro",
                                            description: "Você descobriu o centenário Casarão da Várzea!",
                                            image: UIImage(named: "tickatHouseOfVarzea")!,
-                                           curiositiesNeeded: 15, location: "Casarão da Várzea"), 
+                                           curiositiesNeeded: 15, location: "Casarão da Várzea"),
                                      Badge(name: "Caseiro",
                                            description: "Você descobriu o centenário Casarão da Várzea!",
                                            image: UIImage(named: "tickatPracaVarzea")!,

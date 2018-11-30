@@ -29,7 +29,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate, CLLocationM
         //mapview setup to show user location
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
-        map.setRegion(MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(exactly: 1)!, longitudeDelta: CLLocationDegrees(exactly: 1)!)))
+        map.setRegion(MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(exactly: 0.013)!, longitudeDelta: CLLocationDegrees(exactly: 0.013)!)))
     }
     
     override func willActivate() {
