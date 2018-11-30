@@ -11,13 +11,13 @@ import MapKit
 extension ViewControllerMap: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
-        var selectedLocation:Location? = nil
+        let selectedLocation:Location? = nil
         
-        for i in AppData.shared.allLocations{
-            if i.title == view.annotation?.title{
-                selectedLocation = i
-            }
-        }
+//        for i in AppData.shared.allLocations{
+//            if i.title == view.annotation?.title{
+//                selectedLocation = i
+//            }
+//        }
         
         if ((selectedLocation?.isBlocked) ?? true){
             self.openPopUp(popUp: self.popUpCallToAction)
@@ -57,7 +57,7 @@ extension ViewControllerMap: MKMapViewDelegate {
         if !UIAccessibility.isReduceTransparencyEnabled {
             view.backgroundColor = .clear
             
-            blurEffectView.frame = self.view.bounds
+            blurEffectView.frame = self.tabBarController?.view.bounds ?? self.view.bounds
             blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             
             view.insertSubview(blurEffectView, at: 1)
@@ -72,7 +72,7 @@ extension ViewControllerMap: MKMapViewDelegate {
         
         UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
             popUp.alpha = 1.0;
-            blurEffectView.alpha = 1.0;
+            blurEffectView.alpha = 0.8;
             popUp.transform = .identity
             blurEffectView.transform = .identity
         }, completion: nil)
