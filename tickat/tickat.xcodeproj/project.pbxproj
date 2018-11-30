@@ -45,6 +45,9 @@
 		A16F023A2193707F00D20A92 /* CuriositiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */; };
 		A1DCE4E72199EAB6003E52D5 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DCE4E62199EAB6003E52D5 /* AppData.swift */; };
 		A1DD2BFD21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DD2BFC21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift */; };
+		A1E45B9721B1B14500B5581C /* InterfaceControllerCrownDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E45B9621B1B14500B5581C /* InterfaceControllerCrownDelegate.swift */; };
+		A1E45B9921B1C3AC00B5581C /* CuriosityInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E45B9821B1C3AC00B5581C /* CuriosityInterfaceController.swift */; };
+		A1E45B9B21B1C3BE00B5581C /* BadgeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E45B9A21B1C3BE00B5581C /* BadgeInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +147,9 @@
 		A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriositiesTableViewCell.swift; sourceTree = "<group>"; };
 		A1DCE4E62199EAB6003E52D5 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		A1DD2BFC21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapMKMapViewDelegate.swift; sourceTree = "<group>"; };
+		A1E45B9621B1B14500B5581C /* InterfaceControllerCrownDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceControllerCrownDelegate.swift; sourceTree = "<group>"; };
+		A1E45B9821B1C3AC00B5581C /* CuriosityInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriosityInterfaceController.swift; sourceTree = "<group>"; };
+		A1E45B9A21B1C3BE00B5581C /* BadgeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +277,9 @@
 			isa = PBXGroup;
 			children = (
 				383882FE21922E8A005C0456 /* InterfaceController.swift */,
+				A1E45B9821B1C3AC00B5581C /* CuriosityInterfaceController.swift */,
+				A1E45B9A21B1C3BE00B5581C /* BadgeInterfaceController.swift */,
+				A1E45B9621B1B14500B5581C /* InterfaceControllerCrownDelegate.swift */,
 				3838830021922E8A005C0456 /* ExtensionDelegate.swift */,
 				3838830221922E8A005C0456 /* NotificationController.swift */,
 				3838830421922E8B005C0456 /* Assets.xcassets */,
@@ -520,14 +529,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E45B9721B1B14500B5581C /* InterfaceControllerCrownDelegate.swift in Sources */,
 				3838830321922E8A005C0456 /* NotificationController.swift in Sources */,
 				A13B1F5D21A874E2001BEC77 /* Badge.swift in Sources */,
+				A1E45B9921B1C3AC00B5581C /* CuriosityInterfaceController.swift in Sources */,
 				A13B1F5C21A874DF001BEC77 /* Curiosity.swift in Sources */,
 				3838830121922E8A005C0456 /* ExtensionDelegate.swift in Sources */,
 				A124ACA021AF257A00185230 /* User.swift in Sources */,
 				A13B1F5E21A874E6001BEC77 /* Location.swift in Sources */,
 				383882FF21922E8A005C0456 /* InterfaceController.swift in Sources */,
 				A124AC9F21AF24F100185230 /* AppData.swift in Sources */,
+				A1E45B9B21B1C3BE00B5581C /* BadgeInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,12 @@ import UserNotifications
 
 
 class NotificationController: WKUserNotificationInterfaceController {
+    
+    var curiosity:Curiosity!
 
+    @IBAction func goToCuriosity() {
+        presentController(withName: "curiosity", context: curiosity)
+    }
     override init() {
         // Initialize variables here.
         super.init()
@@ -34,5 +39,14 @@ class NotificationController: WKUserNotificationInterfaceController {
         // This method is called when a notification needs to be presented.
         // Implement it if you use a dynamic notification interface.
         // Populate your dynamic notification interface as quickly as possible.
+        let curiosityTitle = notification.request.content.title
+        
+        for i in AppData.shared.allLocations{
+            if(i.curiosity.title == curiosityTitle){
+                self.curiosity = i.curiosity
+                break
+            }
+        }
     }
+    
 }
