@@ -30,16 +30,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuR-ki-mfE">
-                                                    <rect key="frame" x="0.0" y="6" width="320" height="177.5"/>
+                                                    <rect key="frame" x="0.0" y="6" width="359" height="177.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CuriosityTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiL-L2-Ds8">
-                                                            <rect key="frame" x="20" y="17" width="280" height="20.5"/>
+                                                            <rect key="frame" x="20" y="17" width="319" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="CuriosityText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBC-8f-byN">
-                                                            <rect key="frame" x="20" y="52.5" width="280" height="108"/>
+                                                            <rect key="frame" x="20" y="52.5" width="319" height="108"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -166,10 +166,12 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IWi-II-q7i">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoC-gI-6AE">
-                                <rect key="frame" x="18" y="33" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recentralizar"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoC-gI-6AE">
+                                <rect key="frame" x="319" y="537" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EoC-gI-6AE" secondAttribute="height" multiplier="1:1" id="mm5-9R-cMn"/>
+                                </constraints>
+                                <state key="normal" image="centerLocation"/>
                                 <connections>
                                     <action selector="zoomToCurrentLocationWithSender:" destination="1Mn-FE-pe7" eventType="touchUpInside" id="Y1d-45-Z55"/>
                                 </connections>
@@ -177,6 +179,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="EoC-gI-6AE" firstAttribute="top" secondItem="IWi-II-q7i" secondAttribute="bottom" constant="-81" id="H2V-td-cGD"/>
+                            <constraint firstItem="EoC-gI-6AE" firstAttribute="leading" secondItem="IWi-II-q7i" secondAttribute="trailing" constant="-56" id="VNU-LT-fXb"/>
                             <constraint firstItem="IWi-II-q7i" firstAttribute="top" secondItem="vOL-yW-2tW" secondAttribute="top" id="eiU-HK-YXH"/>
                             <constraint firstItem="IWi-II-q7i" firstAttribute="trailing" secondItem="cU2-qW-Ae6" secondAttribute="trailing" id="o9W-X7-g7p"/>
                             <constraint firstItem="IWi-II-q7i" firstAttribute="bottom" secondItem="cU2-qW-Ae6" secondAttribute="bottom" id="sBk-ET-WNC"/>
@@ -272,10 +276,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descubra a cidade com o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooy-Fk-aCU">
-                                <rect key="frame" x="79.5" y="261" width="216" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="216" id="HZi-jF-GNM"/>
-                                </constraints>
+                                <rect key="frame" x="80.5" y="261" width="214.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -568,6 +569,7 @@
     <resources>
         <image name="badgesIcon" width="34" height="20"/>
         <image name="botao" width="1053" height="164"/>
+        <image name="centerLocation" width="40" height="40"/>
         <image name="check-box-empty" width="102.40000152587891" height="102.40000152587891"/>
         <image name="close" width="27" height="27"/>
         <image name="curiosityIcon" width="26" height="29"/>
