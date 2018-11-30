@@ -120,4 +120,11 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
         view.subviews[1].removeFromSuperview()
         popUpCallToAction.removeFromSuperview()
     }
+    
+    // método que recentraliza mapa
+    @IBAction func zoomToCurrentLocation(sender: AnyObject) {
+        guard let coordinate = locationManager.location?.coordinate else { return }
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        self.map.setRegion(region, animated: true)
+    }
 }
