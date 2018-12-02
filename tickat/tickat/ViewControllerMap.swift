@@ -18,11 +18,19 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
     @IBOutlet weak var map: MKMapView!
     var connectivitySession: WCSession!
     
-    var locationManager:CLLocationManager!
+    var locationManager = CLLocationManager()
+    var geotifications = [Geotification]()
+
     
     @IBOutlet var popUpCallToAction: UIView!
     
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        locationManager.delegate = self
+        // invokes a prompt to the user requesting for Always authorization to use location services
+        locationManager.requestAlwaysAuthorization()
+
         drawMap()
         registerForNotifications()
         if WCSession.isSupported() {
@@ -62,10 +70,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        
-        
-        
-        
-        checkForProximity()
+        //checkForProximity()
         let _:CLLocation = locations[0] as CLLocation
         
         // Call stopUpdatingLocation() to stop listening for location updates,
@@ -93,6 +98,7 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
     func drawMap() {
         // show location on map
         for i in AppData.shared.allLocations {
+            addGeotification(geotification: i.geotification!)
             map.addAnnotation(i)
         }
     }
@@ -127,4 +133,12 @@ class ViewControllerMap: UIViewController, CLLocationManagerDelegate, UNUserNoti
         let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         self.map.setRegion(region, animated: true)
     }
+    
+    func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
+        print("Monitoring failed for region with identifier: \(region!.identifier)")
+    }
+   
+//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+//        map.showsUserLocation = (status == .authorizedAlways)
+//    }
 }

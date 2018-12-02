@@ -23,7 +23,7 @@
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Precisamos da sua localização para mostrar novas curiosidades em seu percurso.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Do you allow this app to know your current location?</string>
+	<string>Precisamos desta permissão para mostrar sua localização atual no mapa.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -56,6 +56,8 @@
 		<true/>
 	</dict>
 	<key>NSAppleEventsUsageDescription</key>
-	<string></string>
+	<string>Precisamos da sua localização para mostrar novas curiosidades em seu percurso.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Precisamos da sua localização para mostrar novas curiosidades em seu percurso.</string>
 </dict>
 </plist>

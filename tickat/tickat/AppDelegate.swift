@@ -7,26 +7,31 @@
 //
 
 import UIKit
+import CoreLocation
+import UserNotifications
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        UIApplication.shared.setMinimumBackgroundFetchInterval(5)
+        
+        locationManager.delegate = self as CLLocationManagerDelegate
+        locationManager.requestAlwaysAuthorization()
 
+//        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil))
+//
+//        DispatchQueue.main.async(execute: {
+//            UIApplication.shared.registerForRemoteNotifications()
+//        })
+        
         return true
     }
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("entrou na função")
-        if let vc = window?.rootViewController as? ViewControllerMap{
-            print("entrou no if")
-            vc.checkForProximity()
-        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -52,8 +57,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    func handleEvent(forRegion region: CLRegion!) {
+        print("geofence detectado")
+        print(region.identifier)
+    }
+
+}
+
+extension AppDelegate: CLLocationManagerDelegate {
     
-
-
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if let region = region as? CLCircularRegion {
+            handleEvent(forRegion: region)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if let region = region as? CLCircularRegion {
+            handleEvent(forRegion: region)
+        }
+    }
+    
+    
 }
 

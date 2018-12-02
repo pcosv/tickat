@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		189716382193835A004A8AAB /* Curiosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189716372193835A004A8AAB /* Curiosity.swift */; };
 		1897163A219394FE004A8AAB /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18971639219394FE004A8AAB /* Badge.swift */; };
+		381650B721B1B30300BC9567 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381650B621B1B30300BC9567 /* Geotification.swift */; };
 		383882C621922E89005C0456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882C521922E89005C0456 /* AppDelegate.swift */; };
 		383882C821922E89005C0456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383882C721922E89005C0456 /* ViewController.swift */; };
 		383882CB21922E89005C0456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383882C921922E89005C0456 /* Main.storyboard */; };
@@ -25,6 +26,10 @@
 		3838830321922E8A005C0456 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3838830221922E8A005C0456 /* NotificationController.swift */; };
 		3838830521922E8B005C0456 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3838830421922E8B005C0456 /* Assets.xcassets */; };
 		387141312199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387141302199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift */; };
+		3875820821B1B7910005ACE9 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875820721B1B7910005ACE9 /* Utilities.swift */; };
+		38907E9A21B1D67900BBB792 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381650B621B1B30300BC9567 /* Geotification.swift */; };
+		38907E9C21B314EB00BBB792 /* ViewControllerMapGeofencing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38907E9B21B314EB00BBB792 /* ViewControllerMapGeofencing.swift */; };
+		38907E9F21B3399D00BBB792 /* America.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 38907E9E21B3399D00BBB792 /* America.gpx */; };
 		3DA8844D219CA60D00CBA489 /* ViewControllerMapNotifyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8844C219CA60C00CBA489 /* ViewControllerMapNotifyUser.swift */; };
 		3DFAB32A21ADE02800E46D1B /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAB32921ADE02800E46D1B /* OnboardingPageViewController.swift */; };
 		952897132194B897000B1ABC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952897122194B897000B1ABC /* User.swift */; };
@@ -105,6 +110,7 @@
 /* Begin PBXFileReference section */
 		189716372193835A004A8AAB /* Curiosity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curiosity.swift; sourceTree = "<group>"; };
 		18971639219394FE004A8AAB /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		381650B621B1B30300BC9567 /* Geotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
 		383882C221922E89005C0456 /* tickat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tickat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		383882C521922E89005C0456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		383882C721922E89005C0456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 		3838830621922E8B005C0456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3838830721922E8B005C0456 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		387141302199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapCheckForProximity.swift; sourceTree = "<group>"; };
+		3875820721B1B7910005ACE9 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		38907E9B21B314EB00BBB792 /* ViewControllerMapGeofencing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapGeofencing.swift; sourceTree = "<group>"; };
+		38907E9E21B3399D00BBB792 /* America.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = America.gpx; sourceTree = "<group>"; };
 		3DA8844C219CA60C00CBA489 /* ViewControllerMapNotifyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapNotifyUser.swift; sourceTree = "<group>"; };
 		3DFAB32921ADE02800E46D1B /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		952897122194B897000B1ABC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 				18971639219394FE004A8AAB /* Badge.swift */,
 				952897122194B897000B1ABC /* User.swift */,
 				952897142194B8A6000B1ABC /* Location.swift */,
+				381650B621B1B30300BC9567 /* Geotification.swift */,
 				9534D5DF219CB03C000DC4D9 /* LocationView.swift */,
 			);
 			path = Classes;
@@ -217,9 +227,11 @@
 			children = (
 				383882C521922E89005C0456 /* AppDelegate.swift */,
 				383882C721922E89005C0456 /* ViewController.swift */,
+				38907E9E21B3399D00BBB792 /* America.gpx */,
 				189716362193823D004A8AAB /* Classes */,
 				383882C921922E89005C0456 /* Main.storyboard */,
 				3DFAB32921ADE02800E46D1B /* OnboardingPageViewController.swift */,
+				3875820721B1B7910005ACE9 /* Utilities.swift */,
 				A16F023721936F1D00D20A92 /* BadgesCollectionViewCell.swift */,
 				A16F02392193707F00D20A92 /* CuriositiesTableViewCell.swift */,
 				383882CC21922E89005C0456 /* Assets.xcassets */,
@@ -230,6 +242,7 @@
 				3DA8844C219CA60C00CBA489 /* ViewControllerMapNotifyUser.swift */,
 				A16F02352193650000D20A92 /* ViewControllerMap.swift */,
 				A1DD2BFC21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift */,
+				38907E9B21B314EB00BBB792 /* ViewControllerMapGeofencing.swift */,
 				387141302199FC46002CC3CF /* ViewControllerMapCheckForProximity.swift */,
 				383882D121922E89005C0456 /* Info.plist */,
 			);
@@ -432,6 +445,7 @@
 			files = (
 				383882D021922E89005C0456 /* LaunchScreen.storyboard in Resources */,
 				383882CD21922E89005C0456 /* Assets.xcassets in Resources */,
+				38907E9F21B3399D00BBB792 /* America.gpx in Resources */,
 				383882CB21922E89005C0456 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,13 +499,16 @@
 				A16F023A2193707F00D20A92 /* CuriositiesTableViewCell.swift in Sources */,
 				3DFAB32A21ADE02800E46D1B /* OnboardingPageViewController.swift in Sources */,
 				383882C821922E89005C0456 /* ViewController.swift in Sources */,
+				381650B721B1B30300BC9567 /* Geotification.swift in Sources */,
 				3DA8844D219CA60D00CBA489 /* ViewControllerMapNotifyUser.swift in Sources */,
 				189716382193835A004A8AAB /* Curiosity.swift in Sources */,
 				A16F02362193650000D20A92 /* ViewControllerMap.swift in Sources */,
+				3875820821B1B7910005ACE9 /* Utilities.swift in Sources */,
 				1897163A219394FE004A8AAB /* Badge.swift in Sources */,
 				A1DD2BFD21A74107000955CD /* ViewControllerMapMKMapViewDelegate.swift in Sources */,
 				952897132194B897000B1ABC /* User.swift in Sources */,
 				383882C621922E89005C0456 /* AppDelegate.swift in Sources */,
+				38907E9C21B314EB00BBB792 /* ViewControllerMapGeofencing.swift in Sources */,
 				A1DCE4E72199EAB6003E52D5 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38907E9A21B1D67900BBB792 /* Geotification.swift in Sources */,
 				3838830321922E8A005C0456 /* NotificationController.swift in Sources */,
 				A13B1F5D21A874E2001BEC77 /* Badge.swift in Sources */,
 				A13B1F5C21A874DF001BEC77 /* Curiosity.swift in Sources */,
